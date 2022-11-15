@@ -29,9 +29,6 @@ class PointPainter {
       common.Color? fill,
       common.Color? stroke,
       double? strokeWidthPx}) {
-    if (point == null) {
-      return;
-    }
 
     if (fill != null) {
       paint.color = new Color.fromARGB(fill.a, fill.r, fill.g, fill.b);

@@ -24,7 +24,6 @@ import 'package:community_charts_common/common.dart' as common
         SliderListenerCallback,
         SliderStyle,
         SymbolRenderer;
-import 'package:flutter/widgets.dart' show hashValues;
 import 'package:meta/meta.dart' show immutable;
 
 import '../chart_behavior.dart' show ChartBehavior, GestureType;
@@ -60,7 +59,7 @@ class Slider<D> extends ChartBehavior<D> {
   final int? layoutPaintOrder;
 
   /// Initial domain position of the slider, in domain units.
-  final dynamic? initialDomainValue;
+  final dynamic initialDomainValue;
 
   /// Callback function that will be called when the position of the slider
   /// changes during a drag event.
@@ -116,7 +115,7 @@ class Slider<D> extends ChartBehavior<D> {
   factory Slider(
       {common.SelectionTrigger? eventTrigger,
       common.SymbolRenderer? handleRenderer,
-      dynamic? initialDomainValue,
+      dynamic initialDomainValue,
       String? roleId,
       common.SliderListenerCallback? onChangeCallback,
       bool snapToDatum = false,
@@ -156,7 +155,7 @@ class Slider<D> extends ChartBehavior<D> {
         break;
       default:
         throw new ArgumentError(
-            'Slider does not support the event trigger ' + '"${eventTrigger}"');
+            'Slider does not support the event trigger ' + '"$eventTrigger"');
     }
     return desiredGestures;
   }
@@ -192,7 +191,7 @@ class Slider<D> extends ChartBehavior<D> {
 
   @override
   int get hashCode {
-    return hashValues(eventTrigger, handleRenderer, initialDomainValue, roleId,
+    return Object.hash(eventTrigger, handleRenderer, initialDomainValue, roleId,
         snapToDatum, style, layoutPaintOrder);
   }
 }
