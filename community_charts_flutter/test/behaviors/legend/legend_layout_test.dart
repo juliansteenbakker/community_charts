@@ -14,8 +14,7 @@
 // limitations under the License.
 
 import 'package:flutter/material.dart';
-import 'package:mockito/mockito.dart';
-import 'package:test/test.dart';
+import 'package:flutter_test/flutter_test.dart';
 
 import 'package:community_charts_flutter/src/behaviors/legend/legend_layout.dart';
 

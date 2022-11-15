@@ -14,9 +14,8 @@
 // limitations under the License.
 
 import 'package:flutter/material.dart' show BuildContext;
-import 'package:mockito/mockito.dart';
 import 'package:flutter/widgets.dart' show InheritedWidget;
-import 'package:test/test.dart';
+import 'package:flutter_test/flutter_test.dart';
 import 'package:community_charts_flutter/src/graphics_factory.dart';
 import 'package:community_charts_flutter/src/text_element.dart';
 
