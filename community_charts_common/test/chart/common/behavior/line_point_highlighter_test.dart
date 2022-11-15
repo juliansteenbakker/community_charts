@@ -17,18 +17,18 @@
 
 import 'dart:math' show Point, Rectangle;
 
-import 'package:charts_common/src/chart/cartesian/cartesian_chart.dart';
-import 'package:charts_common/src/chart/cartesian/axis/axis.dart';
-import 'package:charts_common/src/chart/common/base_chart.dart';
-import 'package:charts_common/src/chart/common/behavior/line_point_highlighter.dart';
-import 'package:charts_common/src/chart/common/datum_details.dart';
-import 'package:charts_common/src/chart/common/processed_series.dart';
-import 'package:charts_common/src/chart/common/series_datum.dart';
-import 'package:charts_common/src/chart/common/series_renderer.dart';
-import 'package:charts_common/src/chart/common/selection_model/selection_model.dart';
-import 'package:charts_common/src/common/material_palette.dart';
-import 'package:charts_common/src/common/math.dart';
-import 'package:charts_common/src/data/series.dart';
+import 'package:community_charts_common/src/chart/cartesian/cartesian_chart.dart';
+import 'package:community_charts_common/src/chart/cartesian/axis/axis.dart';
+import 'package:community_charts_common/src/chart/common/base_chart.dart';
+import 'package:community_charts_common/src/chart/common/behavior/line_point_highlighter.dart';
+import 'package:community_charts_common/src/chart/common/datum_details.dart';
+import 'package:community_charts_common/src/chart/common/processed_series.dart';
+import 'package:community_charts_common/src/chart/common/series_datum.dart';
+import 'package:community_charts_common/src/chart/common/series_renderer.dart';
+import 'package:community_charts_common/src/chart/common/selection_model/selection_model.dart';
+import 'package:community_charts_common/src/common/material_palette.dart';
+import 'package:community_charts_common/src/common/math.dart';
+import 'package:community_charts_common/src/data/series.dart';
 import 'package:mockito/mockito.dart';
 import 'package:test/test.dart';
 

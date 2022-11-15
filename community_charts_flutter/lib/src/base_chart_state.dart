@@ -21,7 +21,7 @@ import 'package:flutter/material.dart'
         State,
         TickerProviderStateMixin,
         Widget;
-import 'package:charts_common/common.dart' as common;
+import 'package:community_charts_common/common.dart' as common;
 import 'package:flutter/widgets.dart'
     show Directionality, LayoutId, CustomMultiChildLayout;
 import 'behaviors/chart_behavior.dart'

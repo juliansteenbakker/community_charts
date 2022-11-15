@@ -14,9 +14,9 @@ types and examples of how to custom components of the chart.
 
 [![Travis CI Build Status](https://travis-ci.org/google/charts.svg?branch=master)](https://travis-ci.org/google/charts)
 
-## charts_common
+## community_charts_common
 
-[![charts_common pub package](https://img.shields.io/pub/v/charts_common.svg)](https://pub.dartlang.org/packages/charts_common)
+[![community_charts_common pub package](https://img.shields.io/pub/v/community_charts_common.svg)](https://pub.dartlang.org/packages/community_charts_common)
 
 A common library for charting packages.
 

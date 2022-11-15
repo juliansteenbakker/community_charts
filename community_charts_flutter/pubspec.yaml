@@ -11,11 +11,11 @@ dependencies:
   # Pointing this to a local path allows for pointing to the latest code
   # in Github for open source development.
   #
-  # The pub version of charts_flutter will point to the pub version of charts_common.
+  # The pub version of charts_flutter will point to the pub version of community_charts_common.
   # The latest pub version is commented out and shown below as an example.
-  charts_common: ^0.12.0
-  # charts_common:
-  #   path: ../charts_common/
+  community_charts_common: ^0.12.0
+  # community_charts_common:
+  #   path: ../community_charts_common/
   collection: ^1.14.5
   flutter:
     sdk: flutter

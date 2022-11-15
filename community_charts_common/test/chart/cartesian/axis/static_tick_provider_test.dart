@@ -15,15 +15,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import 'package:charts_common/src/chart/cartesian/axis/static_tick_provider.dart';
-import 'package:charts_common/src/chart/cartesian/axis/linear/linear_scale.dart';
-import 'package:charts_common/src/chart/cartesian/axis/draw_strategy/base_tick_draw_strategy.dart';
-import 'package:charts_common/src/common/graphics_factory.dart';
-import 'package:charts_common/src/common/text_element.dart';
-import 'package:charts_common/src/chart/common/chart_context.dart';
-import 'package:charts_common/src/chart/cartesian/axis/scale.dart';
-import 'package:charts_common/src/chart/cartesian/axis/spec/tick_spec.dart';
-import 'package:charts_common/src/chart/cartesian/axis/tick_formatter.dart';
+import 'package:community_charts_common/src/chart/cartesian/axis/static_tick_provider.dart';
+import 'package:community_charts_common/src/chart/cartesian/axis/linear/linear_scale.dart';
+import 'package:community_charts_common/src/chart/cartesian/axis/draw_strategy/base_tick_draw_strategy.dart';
+import 'package:community_charts_common/src/common/graphics_factory.dart';
+import 'package:community_charts_common/src/common/text_element.dart';
+import 'package:community_charts_common/src/chart/common/chart_context.dart';
+import 'package:community_charts_common/src/chart/cartesian/axis/scale.dart';
+import 'package:community_charts_common/src/chart/cartesian/axis/spec/tick_spec.dart';
+import 'package:community_charts_common/src/chart/cartesian/axis/tick_formatter.dart';
 import 'package:mockito/mockito.dart';
 import 'package:test/test.dart';
 

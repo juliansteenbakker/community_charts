@@ -16,12 +16,12 @@
 // limitations under the License.
 
 import 'dart:math' show Rectangle;
-import 'package:charts_common/src/chart/common/chart_context.dart';
-import 'package:charts_common/src/chart/common/processed_series.dart';
-import 'package:charts_common/src/chart/cartesian/axis/axis.dart';
-import 'package:charts_common/src/chart/common/behavior/a11y/domain_a11y_explore_behavior.dart';
-import 'package:charts_common/src/chart/cartesian/cartesian_chart.dart';
-import 'package:charts_common/src/data/series.dart';
+import 'package:community_charts_common/src/chart/common/chart_context.dart';
+import 'package:community_charts_common/src/chart/common/processed_series.dart';
+import 'package:community_charts_common/src/chart/cartesian/axis/axis.dart';
+import 'package:community_charts_common/src/chart/common/behavior/a11y/domain_a11y_explore_behavior.dart';
+import 'package:community_charts_common/src/chart/cartesian/cartesian_chart.dart';
+import 'package:community_charts_common/src/data/series.dart';
 import 'package:mockito/mockito.dart';
 import 'package:test/test.dart';
 

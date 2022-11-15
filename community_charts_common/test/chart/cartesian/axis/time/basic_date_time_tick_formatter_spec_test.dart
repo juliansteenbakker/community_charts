@@ -15,9 +15,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import 'package:charts_common/src/chart/cartesian/axis/spec/date_time_axis_spec.dart';
-import 'package:charts_common/src/chart/cartesian/axis/time/date_time_tick_formatter.dart';
-import 'package:charts_common/src/chart/common/chart_context.dart';
+import 'package:community_charts_common/src/chart/cartesian/axis/spec/date_time_axis_spec.dart';
+import 'package:community_charts_common/src/chart/cartesian/axis/time/date_time_tick_formatter.dart';
+import 'package:community_charts_common/src/chart/common/chart_context.dart';
 import 'package:intl/intl.dart' show DateFormat;
 import 'package:mockito/mockito.dart';
 import 'package:test/test.dart';

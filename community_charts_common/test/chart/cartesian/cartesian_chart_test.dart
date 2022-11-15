@@ -15,14 +15,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import 'package:charts_common/src/chart/cartesian/cartesian_chart.dart';
-import 'package:charts_common/src/chart/cartesian/axis/spec/date_time_axis_spec.dart';
-import 'package:charts_common/src/chart/cartesian/axis/spec/ordinal_axis_spec.dart';
-import 'package:charts_common/src/chart/cartesian/axis/spec/numeric_axis_spec.dart';
-import 'package:charts_common/src/chart/common/chart_context.dart';
-import 'package:charts_common/src/common/date_time_factory.dart';
-import 'package:charts_common/src/chart/time_series/time_series_chart.dart';
-import 'package:charts_common/src/common/graphics_factory.dart';
+import 'package:community_charts_common/src/chart/cartesian/cartesian_chart.dart';
+import 'package:community_charts_common/src/chart/cartesian/axis/spec/date_time_axis_spec.dart';
+import 'package:community_charts_common/src/chart/cartesian/axis/spec/ordinal_axis_spec.dart';
+import 'package:community_charts_common/src/chart/cartesian/axis/spec/numeric_axis_spec.dart';
+import 'package:community_charts_common/src/chart/common/chart_context.dart';
+import 'package:community_charts_common/src/common/date_time_factory.dart';
+import 'package:community_charts_common/src/chart/time_series/time_series_chart.dart';
+import 'package:community_charts_common/src/common/graphics_factory.dart';
 
 import 'package:mockito/mockito.dart';
 import 'package:test/test.dart';

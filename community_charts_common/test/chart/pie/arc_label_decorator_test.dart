@@ -16,26 +16,26 @@
 // limitations under the License.
 
 import 'dart:math' show pi, Point, Rectangle;
-import 'package:charts_common/src/chart/common/processed_series.dart'
+import 'package:community_charts_common/src/chart/common/processed_series.dart'
     show ImmutableSeries;
-import 'package:charts_common/src/common/color.dart' show Color;
-import 'package:charts_common/src/common/graphics_factory.dart'
+import 'package:community_charts_common/src/common/color.dart' show Color;
+import 'package:community_charts_common/src/common/graphics_factory.dart'
     show GraphicsFactory;
-import 'package:charts_common/src/common/line_style.dart' show LineStyle;
-import 'package:charts_common/src/common/text_element.dart'
+import 'package:community_charts_common/src/common/line_style.dart' show LineStyle;
+import 'package:community_charts_common/src/common/text_element.dart'
     show TextDirection, TextElement, MaxWidthStrategy;
-import 'package:charts_common/src/common/text_measurement.dart'
+import 'package:community_charts_common/src/common/text_measurement.dart'
     show TextMeasurement;
-import 'package:charts_common/src/common/text_style.dart' show TextStyle;
-import 'package:charts_common/src/chart/cartesian/axis/spec/axis_spec.dart'
+import 'package:community_charts_common/src/common/text_style.dart' show TextStyle;
+import 'package:community_charts_common/src/chart/cartesian/axis/spec/axis_spec.dart'
     show TextStyleSpec;
-import 'package:charts_common/src/chart/common/chart_canvas.dart'
+import 'package:community_charts_common/src/chart/common/chart_canvas.dart'
     show ChartCanvas;
-import 'package:charts_common/src/chart/pie/arc_label_decorator.dart'
+import 'package:community_charts_common/src/chart/pie/arc_label_decorator.dart'
     show ArcLabelDecorator, ArcLabelPosition;
-import 'package:charts_common/src/chart/pie/arc_renderer_element.dart'
+import 'package:community_charts_common/src/chart/pie/arc_renderer_element.dart'
     show ArcRendererElement, ArcRendererElementList;
-import 'package:charts_common/src/data/series.dart' show AccessorFn;
+import 'package:community_charts_common/src/data/series.dart' show AccessorFn;
 
 import 'package:mockito/mockito.dart';
 import 'package:test/test.dart';

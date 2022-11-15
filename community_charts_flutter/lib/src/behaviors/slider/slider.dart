@@ -14,7 +14,7 @@
 // limitations under the License.
 
 import 'dart:math' show Rectangle;
-import 'package:charts_common/common.dart' as common
+import 'package:community_charts_common/common.dart' as common
     show
         ChartBehavior,
         LayoutViewPaintOrder,

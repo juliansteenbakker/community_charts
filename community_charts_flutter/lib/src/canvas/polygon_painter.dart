@@ -15,7 +15,7 @@
 
 import 'dart:math' show Point, Rectangle;
 import 'package:flutter/material.dart';
-import 'package:charts_common/common.dart' as common show Color;
+import 'package:community_charts_common/common.dart' as common show Color;
 
 /// Draws a simple line.
 ///

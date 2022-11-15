@@ -17,21 +17,21 @@
 
 import 'dart:math';
 
-import 'package:charts_common/src/chart/cartesian/axis/axis.dart';
-import 'package:charts_common/src/chart/cartesian/axis/draw_strategy/base_tick_draw_strategy.dart';
-import 'package:charts_common/src/chart/cartesian/axis/collision_report.dart';
-import 'package:charts_common/src/chart/cartesian/axis/numeric_scale.dart';
-import 'package:charts_common/src/chart/cartesian/axis/tick.dart';
-import 'package:charts_common/src/chart/cartesian/axis/tick_formatter.dart';
-import 'package:charts_common/src/chart/cartesian/axis/numeric_extents.dart';
-import 'package:charts_common/src/chart/cartesian/axis/linear/bucketing_numeric_tick_provider.dart';
-import 'package:charts_common/src/chart/common/chart_canvas.dart';
-import 'package:charts_common/src/chart/common/chart_context.dart';
-import 'package:charts_common/src/chart/common/unitconverter/unit_converter.dart';
-import 'package:charts_common/src/common/graphics_factory.dart';
-import 'package:charts_common/src/common/line_style.dart';
-import 'package:charts_common/src/common/text_style.dart';
-import 'package:charts_common/src/common/text_element.dart';
+import 'package:community_charts_common/src/chart/cartesian/axis/axis.dart';
+import 'package:community_charts_common/src/chart/cartesian/axis/draw_strategy/base_tick_draw_strategy.dart';
+import 'package:community_charts_common/src/chart/cartesian/axis/collision_report.dart';
+import 'package:community_charts_common/src/chart/cartesian/axis/numeric_scale.dart';
+import 'package:community_charts_common/src/chart/cartesian/axis/tick.dart';
+import 'package:community_charts_common/src/chart/cartesian/axis/tick_formatter.dart';
+import 'package:community_charts_common/src/chart/cartesian/axis/numeric_extents.dart';
+import 'package:community_charts_common/src/chart/cartesian/axis/linear/bucketing_numeric_tick_provider.dart';
+import 'package:community_charts_common/src/chart/common/chart_canvas.dart';
+import 'package:community_charts_common/src/chart/common/chart_context.dart';
+import 'package:community_charts_common/src/chart/common/unitconverter/unit_converter.dart';
+import 'package:community_charts_common/src/common/graphics_factory.dart';
+import 'package:community_charts_common/src/common/line_style.dart';
+import 'package:community_charts_common/src/common/text_style.dart';
+import 'package:community_charts_common/src/common/text_element.dart';
 import 'package:meta/meta.dart' show required;
 import 'package:mockito/mockito.dart';
 import 'package:test/test.dart';

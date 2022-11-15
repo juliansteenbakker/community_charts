@@ -17,14 +17,14 @@
 
 import 'dart:math';
 
-import 'package:charts_common/src/chart/cartesian/axis/axis.dart';
-import 'package:charts_common/src/chart/cartesian/axis/collision_report.dart';
-import 'package:charts_common/src/chart/cartesian/axis/draw_strategy/tick_draw_strategy.dart';
-import 'package:charts_common/src/chart/cartesian/axis/scale.dart';
-import 'package:charts_common/src/chart/cartesian/axis/spec/tick_spec.dart';
-import 'package:charts_common/src/chart/cartesian/axis/static_tick_provider.dart';
-import 'package:charts_common/src/common/graphics_factory.dart';
-import 'package:charts_common/src/common/text_element.dart';
+import 'package:community_charts_common/src/chart/cartesian/axis/axis.dart';
+import 'package:community_charts_common/src/chart/cartesian/axis/collision_report.dart';
+import 'package:community_charts_common/src/chart/cartesian/axis/draw_strategy/tick_draw_strategy.dart';
+import 'package:community_charts_common/src/chart/cartesian/axis/scale.dart';
+import 'package:community_charts_common/src/chart/cartesian/axis/spec/tick_spec.dart';
+import 'package:community_charts_common/src/chart/cartesian/axis/static_tick_provider.dart';
+import 'package:community_charts_common/src/common/graphics_factory.dart';
+import 'package:community_charts_common/src/common/text_element.dart';
 
 import 'package:mockito/mockito.dart';
 import 'package:test/test.dart';

@@ -15,7 +15,7 @@
 
 import 'dart:math' as math show max, min;
 
-import 'package:charts_common/src/common/math.dart';
+import 'package:community_charts_common/src/common/math.dart';
 
 import '../../../common/style/style_factory.dart' show StyleFactory;
 

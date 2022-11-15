@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import 'package:charts_common/src/data/tree.dart';
+import 'package:community_charts_common/src/data/tree.dart';
 
 import 'base_treemap_renderer.dart';
 import 'treemap_renderer_config.dart';

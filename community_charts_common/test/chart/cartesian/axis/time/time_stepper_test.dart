@@ -15,12 +15,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import 'package:charts_common/src/chart/cartesian/axis/time/date_time_extents.dart';
-import 'package:charts_common/src/chart/cartesian/axis/time/day_time_stepper.dart';
-import 'package:charts_common/src/chart/cartesian/axis/time/hour_time_stepper.dart';
-import 'package:charts_common/src/chart/cartesian/axis/time/minute_time_stepper.dart';
-import 'package:charts_common/src/chart/cartesian/axis/time/month_time_stepper.dart';
-import 'package:charts_common/src/chart/cartesian/axis/time/year_time_stepper.dart';
+import 'package:community_charts_common/src/chart/cartesian/axis/time/date_time_extents.dart';
+import 'package:community_charts_common/src/chart/cartesian/axis/time/day_time_stepper.dart';
+import 'package:community_charts_common/src/chart/cartesian/axis/time/hour_time_stepper.dart';
+import 'package:community_charts_common/src/chart/cartesian/axis/time/minute_time_stepper.dart';
+import 'package:community_charts_common/src/chart/cartesian/axis/time/month_time_stepper.dart';
+import 'package:community_charts_common/src/chart/cartesian/axis/time/year_time_stepper.dart';
 import 'package:test/test.dart';
 import 'simple_date_time_factory.dart' show SimpleDateTimeFactory;
 

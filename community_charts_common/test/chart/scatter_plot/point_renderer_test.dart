@@ -15,13 +15,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import 'package:charts_common/src/chart/common/processed_series.dart'
+import 'package:community_charts_common/src/chart/common/processed_series.dart'
     show MutableSeries;
-import 'package:charts_common/src/chart/scatter_plot/point_renderer.dart';
-import 'package:charts_common/src/chart/scatter_plot/point_renderer_config.dart';
-import 'package:charts_common/src/common/material_palette.dart'
+import 'package:community_charts_common/src/chart/scatter_plot/point_renderer.dart';
+import 'package:community_charts_common/src/chart/scatter_plot/point_renderer_config.dart';
+import 'package:community_charts_common/src/common/material_palette.dart'
     show MaterialPalette;
-import 'package:charts_common/src/data/series.dart' show Series;
+import 'package:community_charts_common/src/data/series.dart' show Series;
 
 import 'package:test/test.dart';
 

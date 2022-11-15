@@ -15,9 +15,9 @@
 
 import 'dart:math' show Rectangle;
 
-import 'package:charts_common/src/chart/common/chart_canvas.dart';
-import 'package:charts_common/src/chart/common/processed_series.dart';
-import 'package:charts_common/src/common/color.dart';
+import 'package:community_charts_common/src/chart/common/chart_canvas.dart';
+import 'package:community_charts_common/src/chart/common/processed_series.dart';
+import 'package:community_charts_common/src/common/color.dart';
 
 /// A renderer element that represents a TreeNode.
 class TreeMapRendererElement<D> {

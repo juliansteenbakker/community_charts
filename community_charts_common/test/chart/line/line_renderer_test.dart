@@ -15,14 +15,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import 'package:charts_common/src/chart/line/line_renderer.dart';
-import 'package:charts_common/src/chart/line/line_renderer_config.dart';
-import 'package:charts_common/src/chart/common/processed_series.dart'
+import 'package:community_charts_common/src/chart/line/line_renderer.dart';
+import 'package:community_charts_common/src/chart/line/line_renderer_config.dart';
+import 'package:community_charts_common/src/chart/common/processed_series.dart'
     show MutableSeries, ImmutableSeries;
-import 'package:charts_common/src/common/color.dart';
-import 'package:charts_common/src/common/material_palette.dart'
+import 'package:community_charts_common/src/common/color.dart';
+import 'package:community_charts_common/src/common/material_palette.dart'
     show MaterialPalette;
-import 'package:charts_common/src/data/series.dart' show Series;
+import 'package:community_charts_common/src/data/series.dart' show Series;
 
 import 'package:mockito/mockito.dart';
 import 'package:test/test.dart';

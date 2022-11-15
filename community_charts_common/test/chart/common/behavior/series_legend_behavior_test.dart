@@ -15,18 +15,18 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import 'package:charts_common/src/chart/cartesian/axis/axis.dart';
-import 'package:charts_common/src/chart/common/base_chart.dart';
-import 'package:charts_common/src/chart/common/processed_series.dart';
-import 'package:charts_common/src/chart/common/series_datum.dart';
-import 'package:charts_common/src/chart/common/series_renderer.dart';
-import 'package:charts_common/src/chart/common/behavior/legend/legend_entry_generator.dart';
-import 'package:charts_common/src/chart/common/behavior/legend/series_legend.dart';
-import 'package:charts_common/src/chart/common/datum_details.dart';
-import 'package:charts_common/src/chart/common/selection_model/selection_model.dart';
-import 'package:charts_common/src/chart/line/line_renderer.dart';
-import 'package:charts_common/src/common/color.dart';
-import 'package:charts_common/src/data/series.dart';
+import 'package:community_charts_common/src/chart/cartesian/axis/axis.dart';
+import 'package:community_charts_common/src/chart/common/base_chart.dart';
+import 'package:community_charts_common/src/chart/common/processed_series.dart';
+import 'package:community_charts_common/src/chart/common/series_datum.dart';
+import 'package:community_charts_common/src/chart/common/series_renderer.dart';
+import 'package:community_charts_common/src/chart/common/behavior/legend/legend_entry_generator.dart';
+import 'package:community_charts_common/src/chart/common/behavior/legend/series_legend.dart';
+import 'package:community_charts_common/src/chart/common/datum_details.dart';
+import 'package:community_charts_common/src/chart/common/selection_model/selection_model.dart';
+import 'package:community_charts_common/src/chart/line/line_renderer.dart';
+import 'package:community_charts_common/src/common/color.dart';
+import 'package:community_charts_common/src/data/series.dart';
 import 'package:test/test.dart';
 
 class ConcreteChart extends BaseChart<String> {
