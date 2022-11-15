@@ -69,7 +69,7 @@ class PieOutsideLabelChart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new charts.PieChart(seriesList,
+    return new charts.PieChart<num>(seriesList,
         animate: animate,
         // Add an [ArcLabelDecorator] configured to render labels outside of the
         // arc with a leader line.
