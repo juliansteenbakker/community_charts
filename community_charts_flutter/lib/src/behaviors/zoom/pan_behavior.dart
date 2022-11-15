@@ -75,7 +75,6 @@ mixin FlutterPanBehaviorMixin<D> on common.PanBehavior<D>
   late BaseChartState _chartState;
 
   set chartState(BaseChartState chartState) {
-
     _chartState = chartState;
     _flingAnimator = chartState.getAnimationController(this);
     _flingAnimator?.addListener(_onFlingTick);

@@ -77,7 +77,6 @@ class FlutterInitialHintBehavior<D> extends common.InitialHintBehavior<D>
   BaseChartState? _chartState;
 
   set chartState(BaseChartState chartState) {
-
     _chartState = chartState;
 
     _hintAnimator = chartState.getAnimationController(this);

@@ -13,7 +13,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import 'package:community_charts_common/common.dart' show LegendEntry, LegendTapHandling;
+import 'package:community_charts_common/common.dart'
+    show LegendEntry, LegendTapHandling;
 
 abstract class TappableLegend<T, D> {
   /// Delegates handling of legend entry clicks according to the configured

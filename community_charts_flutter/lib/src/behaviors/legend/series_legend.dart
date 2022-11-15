@@ -27,8 +27,7 @@ import 'package:community_charts_common/common.dart' as common
         SelectionModelType,
         TextStyleSpec;
 import 'package:collection/collection.dart' show ListEquality;
-import 'package:flutter/widgets.dart'
-    show BuildContext, EdgeInsets, Widget;
+import 'package:flutter/widgets.dart' show BuildContext, EdgeInsets, Widget;
 import 'package:meta/meta.dart' show immutable;
 import '../../chart_container.dart' show ChartContainerRenderObject;
 import '../chart_behavior.dart'
@@ -337,7 +336,8 @@ class _FlutterSeriesLegend<D> extends common.SeriesLegend<D>
 
   @override
   Widget build(BuildContext context) {
-    final hasSelection = legendState.legendEntries.any((entry) => entry.isSelected);
+    final hasSelection =
+        legendState.legendEntries.any((entry) => entry.isSelected);
 
     // Show measures if [showMeasures] is true and there is a selection or if
     // showing measures when there is no selection.
