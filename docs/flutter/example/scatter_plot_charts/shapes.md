@@ -17,7 +17,7 @@ Example:
 /// defined. Configuring a separate fillColor will cause the center of the shape
 /// to be filled in, with white in these examples. The border of the shape will
 /// be color with the color of the data.
-import 'package:charts_flutter/flutter.dart' as charts;
+import 'package:community_charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
 
 class ShapesScatterPlotChart extends StatelessWidget {

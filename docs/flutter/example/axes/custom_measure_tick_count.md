@@ -10,7 +10,7 @@ Example:
 /// The tick count can be set by setting the [desiredMinTickCount] and
 /// [desiredMaxTickCount] for automatically adjusted tick counts (based on
 /// how 'nice' the ticks are) or [desiredTickCount] for a fixed tick count.
-import 'package:charts_flutter/flutter.dart' as charts;
+import 'package:community_charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
 
 class CustomMeasureTickCount extends StatelessWidget {

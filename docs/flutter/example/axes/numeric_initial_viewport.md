@@ -14,7 +14,7 @@ Example:
 /// want to show from 3 to 7.
 /// We can do this by specifying an [NumericExtents] in [NumericAxisSpec].
 
-import 'package:charts_flutter/flutter.dart' as charts;
+import 'package:community_charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
 
 class NumericInitialViewport extends StatelessWidget {

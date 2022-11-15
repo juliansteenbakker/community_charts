@@ -6,7 +6,7 @@ Example:
 
 ```
 /// Dash pattern line chart example
-import 'package:charts_flutter/flutter.dart' as charts;
+import 'package:community_charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
 
 /// Example of a line chart rendered with dash patterns.

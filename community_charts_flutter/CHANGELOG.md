@@ -50,7 +50,7 @@ using the existing method.
 # 0.4.0
 * Fixed export file to export ChartsBehavior in the Flutter library instead of the one that resides
 in community_charts_common. The community_charts_common behavior should not be used except internally in the
-charts_flutter library. This is a breaking change if you are using community_charts_common behavior.
+community_charts_flutter library. This is a breaking change if you are using community_charts_common behavior.
 * Declare compatibility with Dart 2.
 * BasicNumericTickFormatterSpec now takes in a callback instead of NumberFormat as the default
 constructor. Use named constructor withNumberFormat instead. This is a breaking change.

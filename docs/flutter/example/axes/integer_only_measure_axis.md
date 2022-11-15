@@ -11,7 +11,7 @@ Example:
 ///
 /// This is done by customizing the measure axis and setting
 /// [dataIsInWholeNumbers] on the tick provider.
-import 'package:charts_flutter/flutter.dart' as charts;
+import 'package:community_charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
 
 class IntegerOnlyMeasureAxis extends StatelessWidget {

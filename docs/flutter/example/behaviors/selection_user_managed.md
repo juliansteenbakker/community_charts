@@ -14,7 +14,7 @@ Example:
 /// Note that the picture in this example is not interactive, please run the
 /// gallery app to try out using the button to clear selection.
 ///
-import 'package:charts_flutter/flutter.dart' as charts;
+import 'package:community_charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
 
 class SelectionUserManaged extends StatefulWidget {

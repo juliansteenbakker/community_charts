@@ -7,7 +7,7 @@ Example:
 ```
 /// Example of a time series chart with range annotations configured to render
 /// labels in the chart margin area.
-import 'package:charts_flutter/flutter.dart' as charts;
+import 'package:community_charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
 
 class TimeSeriesRangeAnnotationMarginChart extends StatelessWidget {

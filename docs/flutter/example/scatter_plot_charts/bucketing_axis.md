@@ -11,7 +11,7 @@ Example:
 /// into a reserved space on the axis range. The label for the bucket line will
 /// be drawn in the middle of the bucket range, rather than aligned with the
 /// gridline for that value's position on the scale.
-import 'package:charts_flutter/flutter.dart' as charts;
+import 'package:community_charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
 
 class BucketingAxisScatterPlotChart extends StatelessWidget {

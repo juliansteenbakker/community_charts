@@ -10,7 +10,7 @@ Example:
 /// By default, the area skirt for a chart will be drawn with the same color as
 /// the line, but with a 10% opacity assigned to it. An area color function can
 /// be provided to override this with any custom color.
-import 'package:charts_flutter/flutter.dart' as charts;
+import 'package:community_charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
 
 class StackedAreaCustomColorLineChart extends StatelessWidget {

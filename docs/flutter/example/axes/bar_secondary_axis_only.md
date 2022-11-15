@@ -7,7 +7,7 @@ Example:
 ```
 /// Bar chart example
 import 'package:flutter/material.dart';
-import 'package:charts_flutter/flutter.dart' as charts;
+import 'package:community_charts_flutter/flutter.dart' as charts;
 
 /// Example of using only a secondary axis (on the right) for a set of grouped
 /// bars.

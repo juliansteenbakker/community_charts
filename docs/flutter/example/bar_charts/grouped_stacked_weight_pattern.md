@@ -11,7 +11,7 @@ Example:
 /// This is a pattern of weights used to calculate the width of bars within a
 /// bar group. If not specified, each bar in the group will have an equal width.
 import 'package:flutter/material.dart';
-import 'package:charts_flutter/flutter.dart' as charts;
+import 'package:community_charts_flutter/flutter.dart' as charts;
 
 class GroupedStackedWeightPatternBarChart extends StatelessWidget {
   final List<charts.Series> seriesList;

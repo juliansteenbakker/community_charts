@@ -10,7 +10,7 @@ Example:
 /// The second series of bars is rendered with a pattern by defining a
 /// fillPatternFn mapping function.
 import 'package:flutter/material.dart';
-import 'package:charts_flutter/flutter.dart' as charts;
+import 'package:community_charts_flutter/flutter.dart' as charts;
 
 class PatternForwardHatchBarChart extends StatelessWidget {
   final List<charts.Series> seriesList;

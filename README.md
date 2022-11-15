@@ -1,6 +1,6 @@
-# Discontinued
+# Forked
 
-**This project is no longer maintained**, and will not receive further updates. Community members interested in collaborating on a community-maintained fork can coordinate in [this issue](https://github.com/google/charts/issues/798).
+**This project is forked from google/charts**
 
 ---
 
@@ -12,17 +12,15 @@ types and examples of how to custom components of the chart.
 
 *Note*: This is not an official Google product.
 
-[![Travis CI Build Status](https://travis-ci.org/google/charts.svg?branch=master)](https://travis-ci.org/google/charts)
-
 ## community_charts_common
 
 [![community_charts_common pub package](https://img.shields.io/pub/v/community_charts_common.svg)](https://pub.dartlang.org/packages/community_charts_common)
 
 A common library for charting packages.
 
-## charts_flutter
+## community_charts_flutter
 
-[![charts_flutter pub package](https://img.shields.io/pub/v/charts_flutter.svg)](https://pub.dartlang.org/packages/charts_flutter)
+[![community_charts_flutter pub package](https://img.shields.io/pub/v/community_charts_flutter.svg)](https://pub.dartlang.org/packages/community_charts_flutter)
 
 A charting package for [Flutter](https://flutter.io), supporting both Android
 and iOS.

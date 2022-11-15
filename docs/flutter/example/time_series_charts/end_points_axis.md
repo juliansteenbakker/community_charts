@@ -8,7 +8,7 @@ Example:
 /// Example of a time series chart with an end points domain axis.
 ///
 /// An end points axis generates two ticks, one at each end of the axis range.
-import 'package:charts_flutter/flutter.dart' as charts;
+import 'package:community_charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
 
 class EndPointsAxisTimeSeriesChart extends StatelessWidget {

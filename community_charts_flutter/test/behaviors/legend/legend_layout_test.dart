@@ -17,7 +17,7 @@ import 'package:flutter/material.dart';
 import 'package:mockito/mockito.dart';
 import 'package:test/test.dart';
 
-import 'package:charts_flutter/src/behaviors/legend/legend_layout.dart';
+import 'package:community_charts_flutter/src/behaviors/legend/legend_layout.dart';
 
 // Can't use Mockito annotations with BuildContext yet? Fake it.
 class FakeBuildContext extends Fake implements BuildContext {}

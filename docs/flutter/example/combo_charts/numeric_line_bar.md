@@ -7,7 +7,7 @@ Example:
 ```
 /// Example of a numeric combo chart with two series rendered as bars, and a
 /// third rendered as a line.
-import 'package:charts_flutter/flutter.dart' as charts;
+import 'package:community_charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
 
 class NumericComboLineBarChart extends StatelessWidget {

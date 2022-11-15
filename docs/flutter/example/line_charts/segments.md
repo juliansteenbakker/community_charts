@@ -17,7 +17,7 @@ Example:
 /// the [charts.LineRendererConfig]. This could be used, for example, to define
 /// a default dash pattern for the series, with only a specific datum called out
 /// with a different pattern.
-import 'package:charts_flutter/flutter.dart' as charts;
+import 'package:community_charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
 
 class SegmentsLineChart extends StatelessWidget {

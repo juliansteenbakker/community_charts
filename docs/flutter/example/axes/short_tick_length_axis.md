@@ -7,7 +7,7 @@ Example:
 ```
 /// Custom Tick Style Example
 import 'package:flutter/material.dart';
-import 'package:charts_flutter/flutter.dart' as charts;
+import 'package:community_charts_flutter/flutter.dart' as charts;
 
 /// Example of using a custom primary measure axis replacing the default
 /// gridline rendering with a short tick rendering. It also turns on the axis

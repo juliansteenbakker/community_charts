@@ -7,7 +7,7 @@ Example:
 ```
 /// Partial pie chart example, where the data does not cover a full revolution
 /// in the chart.
-import 'package:charts_flutter/flutter.dart' as charts;
+import 'package:community_charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
 
 class PartialPieChart extends StatelessWidget {

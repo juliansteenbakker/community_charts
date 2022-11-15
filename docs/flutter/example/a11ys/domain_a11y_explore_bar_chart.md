@@ -23,7 +23,7 @@ Example:
 /// These semantic node descriptions are read out loud by the OS screen reader
 /// when the user taps within the bounding box, or when the user cycles through
 /// the screen's elements (such as swiping left and right).
-import 'package:charts_flutter/flutter.dart' as charts;
+import 'package:community_charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
 
 class DomainA11yExploreBarChart extends StatelessWidget {

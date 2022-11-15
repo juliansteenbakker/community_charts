@@ -19,7 +19,7 @@ Example:
 /// This will also result in an isolated point being rendered for the domain
 /// value 3 in the Mobile series, because that series also contains a null at
 /// domain 4.
-import 'package:charts_flutter/flutter.dart' as charts;
+import 'package:community_charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
 
 class StackedAreaNullsLineChart extends StatelessWidget {

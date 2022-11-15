@@ -12,7 +12,7 @@ Example:
 /// different color from the main series color. The line renderer supports
 /// drawing points with the "includePoints" option, but those points will share
 /// the same color as the line.
-import 'package:charts_flutter/flutter.dart' as charts;
+import 'package:community_charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
 
 class NumericComboLinePointChart extends StatelessWidget {

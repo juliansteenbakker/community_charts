@@ -7,7 +7,7 @@ Example:
 ```
 /// Example of timeseries chart with annotation rows between the chart draw area
 /// and the domain axis.
-import 'package:charts_flutter/flutter.dart' as charts;
+import 'package:community_charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
 
 class TimeSeriesSymbolAnnotationChart extends StatelessWidget {

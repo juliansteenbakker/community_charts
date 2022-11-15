@@ -14,7 +14,7 @@ Example:
 /// but we want to show starting at 2018 and we only want to show 4 values.
 /// We can do this by specifying an [OrdinalViewport] in [OrdinalAxisSpec].
 
-import 'package:charts_flutter/flutter.dart' as charts;
+import 'package:community_charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
 
 class OrdinalInitialViewport extends StatelessWidget {

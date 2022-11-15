@@ -9,7 +9,7 @@ Example:
 ///
 /// Confidence interval is defined by specifying the upper and lower measure
 /// bounds in the series.
-import 'package:charts_flutter/flutter.dart' as charts;
+import 'package:community_charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
 
 class TimeSeriesConfidenceInterval extends StatelessWidget {

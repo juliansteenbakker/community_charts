@@ -7,7 +7,7 @@ Example:
 ```
 /// Bar chart example
 import 'package:flutter/material.dart';
-import 'package:charts_flutter/flutter.dart' as charts;
+import 'package:community_charts_flutter/flutter.dart' as charts;
 
 /// Example of using a primary and secondary axis (left & right respectively)
 /// for a set of grouped bars. This is useful for comparing Series that have

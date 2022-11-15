@@ -7,7 +7,7 @@ Example:
 ```
 /// Example of the chart behavior that centers the viewport on domain selection.
 
-import 'package:charts_flutter/flutter.dart' as charts;
+import 'package:community_charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
 
 class SlidingViewportOnSelection extends StatelessWidget {

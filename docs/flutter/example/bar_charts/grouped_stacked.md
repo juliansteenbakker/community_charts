@@ -7,7 +7,7 @@ Example:
 ```
 /// Example of a bar chart with grouped, stacked series oriented vertically.
 import 'package:flutter/material.dart';
-import 'package:charts_flutter/flutter.dart' as charts;
+import 'package:community_charts_flutter/flutter.dart' as charts;
 
 class GroupedStackedBarChart extends StatelessWidget {
   final List<charts.Series> seriesList;
