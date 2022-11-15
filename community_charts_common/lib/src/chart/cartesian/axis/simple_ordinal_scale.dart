@@ -296,7 +296,7 @@ class SimpleOrdinalScale implements OrdinalScale {
     // TODO: This currently works because range defaults to 0-1
     // This needs to be looked into further.
     var i = _domain.indexOf(domainValue);
-    if (i != null && range != null) {
+    if (i != null) {
       var domainPx = this[domainValue];
       if (domainPx < range.min) {
         return -1;

@@ -362,7 +362,7 @@ abstract class BaseChart<D> {
   void addBehavior(ChartBehavior<D> behavior) {
     final role = behavior.role;
 
-    if (role != null && _behaviorRoleMap[role] != behavior) {
+    if (_behaviorRoleMap[role] != behavior) {
       // Remove any old behavior with the same role.
       removeBehavior(_behaviorRoleMap[role]);
       // Add the behavior.
@@ -385,7 +385,7 @@ abstract class BaseChart<D> {
     }
 
     final role = behavior.role;
-    if (role != null && _behaviorRoleMap[role] == behavior) {
+    if (_behaviorRoleMap[role] == behavior) {
       _behaviorRoleMap.remove(role);
     }
 
@@ -405,8 +405,7 @@ abstract class BaseChart<D> {
   void registerTappable(ChartBehavior<D> behavior) {
     final role = behavior.role;
 
-    if (role != null &&
-        _behaviorRoleMap[role] == behavior &&
+    if (_behaviorRoleMap[role] == behavior &&
         _behaviorTappableMap[role] != behavior) {
       _behaviorTappableMap[role] = behavior;
     }
@@ -415,7 +414,7 @@ abstract class BaseChart<D> {
   /// Tells the chart that this behavior no longer responds to tap events.
   void unregisterTappable(ChartBehavior<D> behavior) {
     final role = behavior.role;
-    if (role != null && _behaviorTappableMap[role] == behavior) {
+    if (_behaviorTappableMap[role] == behavior) {
       _behaviorTappableMap.remove(role);
     }
   }
@@ -655,7 +654,6 @@ abstract class BaseChart<D> {
   }
 
   bool get animatingThisDraw =>
-      transition != null &&
       transition.inMilliseconds > 0 &&
       !_animationsTemporarilyDisabled;
 

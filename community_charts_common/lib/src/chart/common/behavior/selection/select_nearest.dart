@@ -169,7 +169,7 @@ class SelectNearest<D> implements ChartBehavior<D> {
     final seriesList = <ImmutableSeries<D>>[];
     var seriesDatumList = <SeriesDatum<D>>[];
 
-    if (details != null && details.isNotEmpty) {
+    if (details.isNotEmpty) {
       details.sort((a, b) => a.domainDistance!.compareTo(b.domainDistance!));
 
       if (maximumDomainDistancePx == null ||
@@ -269,17 +269,17 @@ class SelectNearest<D> implements ChartBehavior<D> {
           if (domainLowerBound != null && domainUpperBound != null) {
             if (domain is int) {
               addDatum = (domainLowerBound as int) <= (nearestDomain as int) &&
-                  (nearestDomain as int) <= (domainUpperBound as int);
+                  nearestDomain <= (domainUpperBound as int);
             } else if (domain is double) {
               addDatum =
                   (domainLowerBound as double) <= (nearestDomain as double) &&
-                      (nearestDomain as double) <= (domainUpperBound as double);
+                      nearestDomain <= (domainUpperBound as double);
             } else if (domain is DateTime) {
               addDatum = domainLowerBound == nearestDomain ||
                   domainUpperBound == nearestDomain ||
                   ((domainLowerBound as DateTime)
                           .isBefore(nearestDomain as DateTime) &&
-                      (nearestDomain as DateTime)
+                      (nearestDomain)
                           .isBefore(domainUpperBound as DateTime));
             }
           }

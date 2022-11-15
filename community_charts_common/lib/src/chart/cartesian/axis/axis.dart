@@ -19,25 +19,8 @@ import 'package:collection/collection.dart' show IterableExtension;
 import 'package:meta/meta.dart' show protected, visibleForTesting;
 
 import '../../../../common.dart';
-import '../../../common/graphics_factory.dart' show GraphicsFactory;
-import '../../../common/text_element.dart' show TextElement;
-import '../../../data/series.dart' show AttributeKey;
-import '../../common/chart_canvas.dart' show ChartCanvas;
-import '../../common/chart_context.dart' show ChartContext;
-import '../../layout/layout_view.dart'
-    show
-        LayoutPosition,
-        LayoutView,
-        LayoutViewConfig,
-        LayoutViewPaintOrder,
-        LayoutViewPositionOrder,
-        ViewMeasuredSizes;
 import 'axis_tick.dart' show AxisTicks;
 import 'draw_strategy/small_tick_draw_strategy.dart' show SmallTickDrawStrategy;
-import 'draw_strategy/tick_draw_strategy.dart' show TickDrawStrategy;
-import 'linear/linear_scale.dart' show LinearScale;
-import 'numeric_extents.dart' show NumericExtents;
-import 'numeric_scale.dart' show NumericScale;
 import 'numeric_tick_provider.dart' show NumericTickProvider;
 import 'ordinal_scale.dart' show OrdinalScale;
 import 'ordinal_tick_provider.dart' show OrdinalTickProvider;
@@ -46,7 +29,6 @@ import 'range_tick.dart' show RangeTick;
 import 'scale.dart'
     show MutableScale, RangeBandConfig, RangeBandType, ScaleOutputExtent, Scale;
 import 'simple_ordinal_scale.dart' show SimpleOrdinalScale;
-import 'tick.dart' show Tick;
 import 'tick_formatter.dart'
     show TickFormatter, OrdinalTickFormatter, NumericTickFormatter;
 import 'tick_provider.dart' show TickProvider;
