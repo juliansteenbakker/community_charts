@@ -15,7 +15,7 @@
 
 import 'package:meta/meta.dart' show immutable;
 
-import 'package:community_charts_common/common.dart' as common;
+import 'package:community_charts_common/community_charts_common.dart' as common;
 
 @immutable
 class SelectionModelConfig<D> {
