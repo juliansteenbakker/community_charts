@@ -23,10 +23,10 @@ jobs:
         run: flutter doctor -v
       - name: Install dependencies
         run: dart pub get
-        working-directory: ${{ github.workspace }}/charts/community_charts_common
+        working-directory: ${{ github.workspace }}/community_charts_common
       - name: Linter
         run: flutter analyze
-        working-directory: ${{ github.workspace }}/charts/community_charts_common
+        working-directory: ${{ github.workspace }}/community_charts_common
   analysis-community-charts-flutter:
     runs-on: ubuntu-latest
     steps:
@@ -42,10 +42,10 @@ jobs:
         run: flutter doctor -v
       - name: Install dependencies
         run: flutter pub get
-        working-directory: ${{ github.workspace }}/charts/community_charts_flutter
+        working-directory: ${{ github.workspace }}/community_charts_flutter
       - name: Linter
         run: flutter analyze
-        working-directory: ${{ github.workspace }}/charts/community_charts_flutter
+        working-directory: ${{ github.workspace }}/community_charts_flutter
   formatting-community-charts-common:
     runs-on: ubuntu-latest
     steps:
@@ -59,7 +59,7 @@ jobs:
           cache: true
       - name: Format
         run: flutter format -n --set-exit-if-changed .
-        working-directory: ${{ github.workspace }}/charts/community_charts_common
+        working-directory: ${{ github.workspace }}/community_charts_common
   formatting-community-charts-flutter:
     runs-on: ubuntu-latest
     steps:
@@ -73,7 +73,7 @@ jobs:
           cache: true
       - name: Format
         run: flutter format -n --set-exit-if-changed .
-        working-directory: ${{ github.workspace }}/charts/community_charts_flutter
+        working-directory: ${{ github.workspace }}/community_charts_flutter
   test-community-charts-common:
     runs-on: ubuntu-latest
     steps:
@@ -87,7 +87,7 @@ jobs:
           cache: true
       - name: Tests
         run: flutter test
-        working-directory: ${{ github.workspace }}/charts/community_charts_common
+        working-directory: ${{ github.workspace }}/community_charts_common
   test-community-charts-flutter:
     runs-on: ubuntu-latest
     steps:
@@ -101,4 +101,4 @@ jobs:
           cache: true
       - name: Tests
         run: flutter test
-        working-directory: ${{ github.workspace }}/charts/community_charts_flutter
+        working-directory: ${{ github.workspace }}/community_charts_flutter
