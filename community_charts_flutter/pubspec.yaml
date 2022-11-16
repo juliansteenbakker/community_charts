@@ -13,9 +13,9 @@ dependencies:
   #
   # The pub version of community_charts_flutter will point to the pub version of community_charts_common.
   # The latest pub version is commented out and shown below as an example.
-  community_charts_common: ^0.12.0
-  # community_charts_common:
-  #   path: ../community_charts_common/
+#  community_charts_common: ^0.12.0
+  community_charts_common:
+    path: ../community_charts_common/
   collection: ^1.14.5
   flutter:
     sdk: flutter
