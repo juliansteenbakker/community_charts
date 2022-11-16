@@ -22,7 +22,8 @@
 import 'dart:math';
 // EXCLUDE_FROM_GALLERY_DOCS_END
 import 'package:flutter/material.dart';
-import 'package:community_charts_flutter/community_charts_flutter.dart' as charts;
+import 'package:community_charts_flutter/community_charts_flutter.dart'
+    as charts;
 
 class LegendOptions extends StatelessWidget {
   final List<charts.Series<dynamic, String>> seriesList;

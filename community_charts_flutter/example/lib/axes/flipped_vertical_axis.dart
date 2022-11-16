@@ -18,7 +18,8 @@
 import 'dart:math';
 // EXCLUDE_FROM_GALLERY_DOCS_END
 import 'package:flutter/material.dart';
-import 'package:community_charts_flutter/community_charts_flutter.dart' as charts;
+import 'package:community_charts_flutter/community_charts_flutter.dart'
+    as charts;
 
 /// Example of flipping the vertical measure axis direction so that larger
 /// values render downward instead of the usual rendering up.

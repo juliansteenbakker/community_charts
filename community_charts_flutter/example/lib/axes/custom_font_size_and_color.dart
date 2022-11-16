@@ -18,7 +18,8 @@
 import 'dart:math';
 // EXCLUDE_FROM_GALLERY_DOCS_END
 import 'package:flutter/material.dart';
-import 'package:community_charts_flutter/community_charts_flutter.dart' as charts;
+import 'package:community_charts_flutter/community_charts_flutter.dart'
+    as charts;
 
 /// Example of using a custom primary measure and domain axis replacing the
 /// renderSpec with one with a custom font size and a custom color.
