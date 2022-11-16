@@ -267,8 +267,8 @@ class _ChartTitleLayoutView<D> extends LayoutView {
 
   bool get isRtl => chart?.context.isRtl ?? false;
 
-  late Rectangle<int> _componentBounds;
-  late Rectangle<int> _drawAreaBounds;
+  late Rectangle<int>? _componentBounds;
+  late Rectangle<int>? _drawAreaBounds;
 
   @override
   GraphicsFactory? graphicsFactory;
@@ -399,11 +399,11 @@ class _ChartTitleLayoutView<D> extends LayoutView {
 
       case BehaviorPosition.inside:
         preferredWidth = _drawAreaBounds != null
-            ? min(_drawAreaBounds.width, maxWidth)
+            ? min(_drawAreaBounds!.width, maxWidth)
             : maxWidth;
 
         preferredHeight = _drawAreaBounds != null
-            ? min(_drawAreaBounds.height, maxHeight)
+            ? min(_drawAreaBounds!.height, maxHeight)
             : maxHeight;
         break;
     }
@@ -439,8 +439,7 @@ class _ChartTitleLayoutView<D> extends LayoutView {
       // Create [TextStyle] from [TextStyleSpec] to be used by all the
       // elements. The [GraphicsFactory] is needed so it can't be created
       // earlier.
-      final textStyle =
-          _getTextStyle(graphicsFactory!, _config.titleStyleSpec);
+      final textStyle = _getTextStyle(graphicsFactory!, _config.titleStyleSpec);
 
       _titleTextElement = graphicsFactory!.createTextElement(_config.title)
         ..maxWidthStrategy = _config.maxWidthStrategy
@@ -448,8 +447,8 @@ class _ChartTitleLayoutView<D> extends LayoutView {
 
       _titleTextElement!.maxWidth =
           resolvedTitleDirection == ChartTitleDirection.horizontal
-              ? _componentBounds.width
-              : _componentBounds.height;
+              ? _componentBounds!.width
+              : _componentBounds!.height;
     }
 
     // Get the height of the title so that we can off-set both text elements.
@@ -473,8 +472,8 @@ class _ChartTitleLayoutView<D> extends LayoutView {
 
         _subTitleTextElement!.maxWidth =
             resolvedTitleDirection == ChartTitleDirection.horizontal
-                ? _componentBounds.width
-                : _componentBounds.height;
+                ? _componentBounds!.width
+                : _componentBounds!.height;
       }
 
       // Get the height of the sub-title so that we can off-set both text
@@ -485,7 +484,7 @@ class _ChartTitleLayoutView<D> extends LayoutView {
     // Draw a title if the text is not empty.
     final labelPoint = _getLabelPosition(
         true,
-        _componentBounds,
+        _componentBounds!,
         resolvedTitleDirection,
         _titleTextElement!,
         titleHeight,
@@ -504,7 +503,7 @@ class _ChartTitleLayoutView<D> extends LayoutView {
     if (_config.subTitle != null) {
       final labelPoint = _getLabelPosition(
           false,
-          _componentBounds,
+          _componentBounds!,
           resolvedTitleDirection,
           _subTitleTextElement!,
           titleHeight,
@@ -737,7 +736,7 @@ class _ChartTitleLayoutView<D> extends LayoutView {
   }
 
   @override
-  Rectangle<int> get componentBounds => _drawAreaBounds;
+  Rectangle<int>? get componentBounds => _drawAreaBounds;
 
   @override
   bool get isSeriesRenderer => false;

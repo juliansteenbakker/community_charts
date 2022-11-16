@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import 'package:community_charts_common/common.dart' as common
+import 'package:community_charts_common/community_charts_common.dart' as common
     show
         BehaviorPosition,
         ChartBehavior,
@@ -25,8 +25,7 @@ import 'package:community_charts_common/common.dart' as common
         OutsideJustification,
         SelectionModelType,
         TextStyleSpec;
-import 'package:flutter/widgets.dart'
-    show BuildContext, EdgeInsets, Widget;
+import 'package:flutter/widgets.dart' show BuildContext, EdgeInsets, Widget;
 import 'package:meta/meta.dart' show immutable;
 import '../../chart_container.dart' show ChartContainerRenderObject;
 import '../chart_behavior.dart'

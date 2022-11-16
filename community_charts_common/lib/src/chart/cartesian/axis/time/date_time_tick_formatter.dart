@@ -124,9 +124,9 @@ class DateTimeTickFormatter implements TickFormatter<DateTime> {
   ///
   /// The formatters are expected to be provided with keys in increasing order.
   factory DateTimeTickFormatter.withFormatters(
-      Map<int, TimeTickFormatter> formatters) {
+      Map<int, TimeTickFormatter>? formatters) {
     // Formatters must be non empty.
-    if (formatters.isEmpty) {
+    if (formatters == null || formatters.isEmpty) {
       throw ArgumentError('At least one TimeTickFormatter is required.');
     }
 

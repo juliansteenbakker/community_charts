@@ -232,9 +232,8 @@ abstract class BaseTickDrawStrategy<D> implements TickDrawStrategy<D> {
   void updateTickWidth(List<Tick<D>> ticks, int maxWidth, int maxHeight,
       AxisOrientation orientation,
       {bool collision = false}) {
-    final isVertical =
-        orientation == AxisOrientation.right ||
-            orientation == AxisOrientation.left;
+    final isVertical = orientation == AxisOrientation.right ||
+        orientation == AxisOrientation.left;
     final rotationRelativeToAxis =
         labelRotation(collision: collision).toDouble();
     final rotationRads =

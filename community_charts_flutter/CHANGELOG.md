@@ -1,3 +1,6 @@
+# 1.0.0
+Initial fork from google/charts
+
 # 0.12.0
 * Add functions to draw horizontal or vertical links onto the dart charts web canvas.
 * Add "preserveSelection" functionality to InitialSelection chart Behavior.

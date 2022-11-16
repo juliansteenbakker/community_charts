@@ -279,8 +279,7 @@ class SelectNearest<D> implements ChartBehavior<D> {
                   domainUpperBound == nearestDomain ||
                   ((domainLowerBound as DateTime)
                           .isBefore(nearestDomain as DateTime) &&
-                      (nearestDomain)
-                          .isBefore(domainUpperBound as DateTime));
+                      (nearestDomain).isBefore(domainUpperBound as DateTime));
             }
           }
 
