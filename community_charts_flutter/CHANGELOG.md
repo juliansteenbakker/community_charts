@@ -1,5 +1,9 @@
 # 1.0.0
-Initial fork from google/charts
+Initial fork from google/charts.
+
+* Migrated to null-safety.
+* Fixed tests to work with null-safety.
+* Applied latest flutter analyzer hints.
 
 # 0.12.0
 * Add functions to draw horizontal or vertical links onto the dart charts web canvas.
