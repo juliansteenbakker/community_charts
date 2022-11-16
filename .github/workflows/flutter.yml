@@ -1,4 +1,4 @@
-name: code analysis & formatting
+name: ci
 
 on:
   push:
