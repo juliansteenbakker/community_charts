@@ -77,17 +77,17 @@ class SunburstArcRenderer<D> extends BaseArcRenderer<D> {
     seriesList.forEach((MutableSeries<D> series) {
       var elements = <SunburstArcRendererElement<D>>[];
 
-      var domainFn = series.domainFn;
+      // var domainFn = series.domainFn;
       var measureFn = series.measureFn;
 
       // The seriesMeasureTotal needs to be computed from currently displayed
       // top level.
-      var seriesMeasureTotal = 0.0;
+      // var seriesMeasureTotal = 0.0;
       for (var i = 0; i < series.data.length; i++) {
         final node = series.data[i] as TreeNode<Object>;
         final measure = measureFn(i);
         if (node.depth == 1 && measure != null) {
-          seriesMeasureTotal += measure;
+          // seriesMeasureTotal += measure;
         }
       }
 
@@ -96,9 +96,9 @@ class SunburstArcRenderer<D> extends BaseArcRenderer<D> {
       var startAngle = config.startAngle;
       var arcLength = config.arcLength;
 
-      var totalAngle = 0.0;
+      // var totalAngle = 0.0;
 
-      var measures = <num>[];
+      // var measures = <num>[];
 
       // No data processing is same as the regular arc renderer.
       if (series.data.isEmpty) {
@@ -423,11 +423,11 @@ class SunburstArcRenderer<D> extends BaseArcRenderer<D> {
     super.paint(canvas, animationPercent);
   }
 
-  bool _isNodeDisplayed(TreeNode<D>? node) {
-    return node != null &&
-        (node.depth <= config.initialDisplayLevel ||
-            _nodeToExpand.contains(node));
-  }
+  // bool _isNodeDisplayed(TreeNode<D>? node) {
+  //   return node != null &&
+  //       (node.depth <= config.initialDisplayLevel ||
+  //           _nodeToExpand.contains(node));
+  // }
 
   // Records the nodes to expand beyond initial display level.
   void expandNode(TreeNode<D>? node) {

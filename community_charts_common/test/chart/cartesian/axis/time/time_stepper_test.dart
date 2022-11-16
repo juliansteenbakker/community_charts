@@ -31,9 +31,9 @@ const EPSILON = 0.001;
 /// TODO: Check and fix with other timezones
 bool _localTimeZoneMatchesTestExpectations() {
   return false;
-  final Duration difference =
-      DateTime(2017, 3, 12, 3).difference(DateTime(2017, 3, 12, 2));
-  return difference.inSeconds == 0;
+  // final Duration difference =
+  //     DateTime(2017, 3, 12, 3).difference(DateTime(2017, 3, 12, 2));
+  // return difference.inSeconds == 0;
 }
 
 void main() {
