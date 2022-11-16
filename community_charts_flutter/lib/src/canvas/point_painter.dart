@@ -15,7 +15,8 @@
 
 import 'dart:math' show Point;
 import 'package:flutter/material.dart';
-import 'package:community_charts_common/community_charts_common.dart' as common show Color;
+import 'package:community_charts_common/community_charts_common.dart' as common
+    show Color;
 
 /// Draws a simple point.
 ///

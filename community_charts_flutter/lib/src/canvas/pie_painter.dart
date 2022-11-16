@@ -15,7 +15,8 @@
 
 import 'dart:math' show cos, sin, Point;
 import 'package:flutter/material.dart';
-import 'package:community_charts_common/community_charts_common.dart' as common show CanvasPie;
+import 'package:community_charts_common/community_charts_common.dart' as common
+    show CanvasPie;
 import 'circle_sector_painter.dart' show CircleSectorPainter;
 
 /// Draws a pie chart, with an optional hole in the center.
