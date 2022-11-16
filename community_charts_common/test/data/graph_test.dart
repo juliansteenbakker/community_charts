@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import 'package:community_charts_common/common.dart';
+import 'package:community_charts_common/community_charts_common.dart';
 import 'package:community_charts_common/src/data/graph.dart' as graph_structure
     show indexNotRelevant, Link, Node;
 import 'package:test/test.dart';

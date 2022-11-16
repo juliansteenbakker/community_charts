@@ -1,3 +1,10 @@
+# 1.0.0
+Initial fork from google/charts.
+
+* Updated dependencies to stable versions.
+* Apply dart suggestions and refactor code.
+* Migrate hashValues to Object.hash
+
 # 0.12.0
 * Expose `NumericScale`, `LinearScale` and `ScaleSpec`
 * Add functions to draw horizontal or vertical links.

@@ -19,7 +19,7 @@ import '../base_chart.dart';
 ///
 /// For example pan and zoom are implemented via behavior strategies.
 abstract class ChartBehavior<D> {
-  String get role;
+  String? get role;
 
   /// Injects the behavior into a chart.
   void attachTo(BaseChart<D> chart);

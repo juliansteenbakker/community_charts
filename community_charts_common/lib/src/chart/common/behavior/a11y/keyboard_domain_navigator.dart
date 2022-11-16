@@ -169,9 +169,9 @@ abstract class KeyboardDomainNavigator<D> implements ChartBehavior<D> {
   bool _selectDomainIndex(
       SelectionModelType selectionModelType, int domainIndex) {
     final selectionModel = _chart.getSelectionModel(selectionModelType);
-    if (selectionModel == null) {
-      return false;
-    }
+    // if (selectionModel == null) {
+    //   return false;
+    // }
 
     if (domainIndex == NO_SELECTION) {
       selectionModel.clearSelection();

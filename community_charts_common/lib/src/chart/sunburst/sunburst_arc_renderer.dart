@@ -430,7 +430,7 @@ class SunburstArcRenderer<D> extends BaseArcRenderer<D> {
   }
 
   // Records the nodes to expand beyond initial display level.
-  void expandNode(TreeNode<D> node) {
+  void expandNode(TreeNode<D>? node) {
     if (node == null) {
       _nodeToExpand.clear();
     } else if (node.hasChildren) {

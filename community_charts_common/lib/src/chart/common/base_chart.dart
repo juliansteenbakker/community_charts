@@ -124,7 +124,7 @@ abstract class BaseChart<D> {
       this.graphicsFactory = graphicsFactory;
 
       _layoutManager.applyToViews(
-          (LayoutView view) => view.graphicsFactory = graphicsFactory);
+              (LayoutView view) => view.graphicsFactory = graphicsFactory);
     }
 
     configurationChanged();
@@ -261,7 +261,7 @@ abstract class BaseChart<D> {
     // is disabled, then we expect each series renderer to filter out the event
     // if [chartPoint] is located outside of its own component bounds.
     final boundsOverride =
-        selectAcrossAllDrawAreaComponents ? drawableLayoutAreaBounds : null;
+    selectAcrossAllDrawAreaComponents ? drawableLayoutAreaBounds : null;
 
     final details = <DatumDetails<D>>[];
     _usingRenderers.forEach((String rendererId) {
@@ -362,7 +362,7 @@ abstract class BaseChart<D> {
   void addBehavior(ChartBehavior<D> behavior) {
     final role = behavior.role;
 
-    if (_behaviorRoleMap[role] != behavior) {
+    if (role != null && _behaviorRoleMap[role] != behavior) {
       // Remove any old behavior with the same role.
       removeBehavior(_behaviorRoleMap[role]);
       // Add the behavior.
@@ -385,7 +385,7 @@ abstract class BaseChart<D> {
     }
 
     final role = behavior.role;
-    if (_behaviorRoleMap[role] == behavior) {
+    if (role != null && _behaviorRoleMap[role] == behavior) {
       _behaviorRoleMap.remove(role);
     }
 
@@ -405,7 +405,8 @@ abstract class BaseChart<D> {
   void registerTappable(ChartBehavior<D> behavior) {
     final role = behavior.role;
 
-    if (_behaviorRoleMap[role] == behavior &&
+    if (role != null &&
+        _behaviorRoleMap[role] == behavior &&
         _behaviorTappableMap[role] != behavior) {
       _behaviorTappableMap[role] = behavior;
     }
@@ -414,7 +415,7 @@ abstract class BaseChart<D> {
   /// Tells the chart that this behavior no longer responds to tap events.
   void unregisterTappable(ChartBehavior<D> behavior) {
     final role = behavior.role;
-    if (_behaviorTappableMap[role] == behavior) {
+    if (role != null && _behaviorTappableMap[role] == behavior) {
       _behaviorTappableMap.remove(role);
     }
   }
@@ -487,7 +488,7 @@ abstract class BaseChart<D> {
     }
 
     var processedSeriesList =
-        List.of(seriesList.map<MutableSeries<D>>(makeSeries));
+    List.of(seriesList.map<MutableSeries<D>>(makeSeries));
 
     // Allow listeners to manipulate the seriesList.
     fireOnDraw(processedSeriesList);
@@ -655,7 +656,7 @@ abstract class BaseChart<D> {
 
   bool get animatingThisDraw =>
       transition.inMilliseconds > 0 &&
-      !_animationsTemporarilyDisabled;
+          !_animationsTemporarilyDisabled;
 
   @protected
   void fireOnDraw(List<MutableSeries<D>> seriesList) {
@@ -753,11 +754,11 @@ class LifecycleListener<D> {
 
   LifecycleListener(
       {this.onData,
-      this.onPreprocess,
-      this.onPostprocess,
-      this.onAxisConfigured,
-      this.onPostrender,
-      this.onAnimationComplete});
+        this.onPreprocess,
+        this.onPostprocess,
+        this.onAxisConfigured,
+        this.onPostrender,
+        this.onAnimationComplete});
 }
 
 typedef LifecycleSeriesListCallback<D> = void Function(

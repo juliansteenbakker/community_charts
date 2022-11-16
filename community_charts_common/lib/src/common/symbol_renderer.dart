@@ -323,8 +323,8 @@ class CylinderSymbolRenderer extends PointSymbolRenderer {
   CylinderSymbolRenderer();
 
   @override
-  void paint(ChartCanvas canvas, Point<double> p1, double radius,
-      {required Point<double> p2,
+  void paint(ChartCanvas canvas, Point<double>? p1, double radius,
+      {required Point<double>? p2,
       Color? fillColor,
       Color? strokeColor,
       double? strokeWidthPx}) {
@@ -363,8 +363,8 @@ class RectangleRangeSymbolRenderer extends PointSymbolRenderer {
   RectangleRangeSymbolRenderer();
 
   @override
-  void paint(ChartCanvas canvas, Point<double> p1, double radius,
-      {required Point<double> p2,
+  void paint(ChartCanvas canvas, Point<double>? p1, double radius,
+      {required Point<double>? p2,
       Color? fillColor,
       Color? strokeColor,
       double? strokeWidthPx}) {

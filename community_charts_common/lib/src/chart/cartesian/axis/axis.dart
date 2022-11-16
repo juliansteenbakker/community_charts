@@ -18,7 +18,7 @@ import 'dart:math' show Rectangle, min, max;
 import 'package:collection/collection.dart' show IterableExtension;
 import 'package:meta/meta.dart' show protected, visibleForTesting;
 
-import '../../../../common.dart';
+import '../../../../community_charts_common.dart';
 import 'axis_tick.dart' show AxisTicks;
 import 'draw_strategy/small_tick_draw_strategy.dart' show SmallTickDrawStrategy;
 import 'numeric_tick_provider.dart' show NumericTickProvider;
