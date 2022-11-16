@@ -22,7 +22,8 @@ import 'package:community_charts_common/src/chart/common/datum_details.dart';
 import 'package:community_charts_common/src/chart/common/processed_series.dart';
 import 'package:community_charts_common/src/chart/common/series_datum.dart';
 import 'package:community_charts_common/src/chart/common/series_renderer.dart';
-import 'package:community_charts_common/src/common/math.dart' show NullablePoint;
+import 'package:community_charts_common/src/common/math.dart'
+    show NullablePoint;
 import 'package:community_charts_common/src/common/style/style_factory.dart';
 import 'package:community_charts_common/src/data/series.dart';
 import 'package:community_charts_common/src/data/tree.dart';

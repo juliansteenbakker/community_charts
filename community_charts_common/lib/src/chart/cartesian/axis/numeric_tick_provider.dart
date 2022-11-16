@@ -153,8 +153,7 @@ class NumericTickProvider extends BaseTickProvider<num> {
     // Don't allow a single tick, it doesn't make sense. so tickCount > 1
     if (maxTickCount > 1) {
       _desiredMaxTickCount = maxTickCount;
-      if (minTickCount > 1 &&
-          minTickCount <= _desiredMaxTickCount!) {
+      if (minTickCount > 1 && minTickCount <= _desiredMaxTickCount!) {
         _desiredMinTickCount = minTickCount;
       } else {
         _desiredMinTickCount = 2;

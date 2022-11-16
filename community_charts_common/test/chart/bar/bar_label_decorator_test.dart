@@ -21,12 +21,14 @@ import 'package:community_charts_common/src/chart/common/processed_series.dart'
 import 'package:community_charts_common/src/common/color.dart' show Color;
 import 'package:community_charts_common/src/common/graphics_factory.dart'
     show GraphicsFactory;
-import 'package:community_charts_common/src/common/line_style.dart' show LineStyle;
+import 'package:community_charts_common/src/common/line_style.dart'
+    show LineStyle;
 import 'package:community_charts_common/src/common/text_element.dart'
     show TextDirection, TextElement, MaxWidthStrategy;
 import 'package:community_charts_common/src/common/text_measurement.dart'
     show TextMeasurement;
-import 'package:community_charts_common/src/common/text_style.dart' show TextStyle;
+import 'package:community_charts_common/src/common/text_style.dart'
+    show TextStyle;
 import 'package:community_charts_common/src/chart/bar/bar_renderer.dart'
     show ImmutableBarRendererElement;
 import 'package:community_charts_common/src/chart/cartesian/axis/spec/axis_spec.dart'

@@ -124,7 +124,7 @@ abstract class BaseChart<D> {
       this.graphicsFactory = graphicsFactory;
 
       _layoutManager.applyToViews(
-              (LayoutView view) => view.graphicsFactory = graphicsFactory);
+          (LayoutView view) => view.graphicsFactory = graphicsFactory);
     }
 
     configurationChanged();
@@ -261,7 +261,7 @@ abstract class BaseChart<D> {
     // is disabled, then we expect each series renderer to filter out the event
     // if [chartPoint] is located outside of its own component bounds.
     final boundsOverride =
-    selectAcrossAllDrawAreaComponents ? drawableLayoutAreaBounds : null;
+        selectAcrossAllDrawAreaComponents ? drawableLayoutAreaBounds : null;
 
     final details = <DatumDetails<D>>[];
     _usingRenderers.forEach((String rendererId) {
@@ -488,7 +488,7 @@ abstract class BaseChart<D> {
     }
 
     var processedSeriesList =
-    List.of(seriesList.map<MutableSeries<D>>(makeSeries));
+        List.of(seriesList.map<MutableSeries<D>>(makeSeries));
 
     // Allow listeners to manipulate the seriesList.
     fireOnDraw(processedSeriesList);
@@ -655,8 +655,7 @@ abstract class BaseChart<D> {
   }
 
   bool get animatingThisDraw =>
-      transition.inMilliseconds > 0 &&
-          !_animationsTemporarilyDisabled;
+      transition.inMilliseconds > 0 && !_animationsTemporarilyDisabled;
 
   @protected
   void fireOnDraw(List<MutableSeries<D>> seriesList) {
@@ -754,11 +753,11 @@ class LifecycleListener<D> {
 
   LifecycleListener(
       {this.onData,
-        this.onPreprocess,
-        this.onPostprocess,
-        this.onAxisConfigured,
-        this.onPostrender,
-        this.onAnimationComplete});
+      this.onPreprocess,
+      this.onPostprocess,
+      this.onAxisConfigured,
+      this.onPostrender,
+      this.onAnimationComplete});
 }
 
 typedef LifecycleSeriesListCallback<D> = void Function(

@@ -439,8 +439,7 @@ class _ChartTitleLayoutView<D> extends LayoutView {
       // Create [TextStyle] from [TextStyleSpec] to be used by all the
       // elements. The [GraphicsFactory] is needed so it can't be created
       // earlier.
-      final textStyle =
-          _getTextStyle(graphicsFactory!, _config.titleStyleSpec);
+      final textStyle = _getTextStyle(graphicsFactory!, _config.titleStyleSpec);
 
       _titleTextElement = graphicsFactory!.createTextElement(_config.title)
         ..maxWidthStrategy = _config.maxWidthStrategy
