@@ -1,3 +1,7 @@
+# 1.0.1
+* Removed unused dependencies
+* Updated documentation urls
+
 # 1.0.0
 Initial fork from google/charts.
 
