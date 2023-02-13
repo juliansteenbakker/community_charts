@@ -46,8 +46,8 @@ class MockChart extends Mock implements BaseChart<String> {
   }
 }
 
-class MockSelectionModel extends Mock implements MutableSelectionModel<String> {
-}
+class MockSelectionModel extends Mock
+    implements MutableSelectionModel<String> {}
 
 void main() {
   MockChart _chart;
