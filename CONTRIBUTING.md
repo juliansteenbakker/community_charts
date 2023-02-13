@@ -1,3 +1,3 @@
-This project is no longer maintained, and will not receive further updates.
-Community members interested in collaborating on a community-maintained fork can
-coordinate in [this issue](https://github.com/google/charts/issues/798).
+The original project is no longer maintained, and will not receive further updates.
+Community members interested in collaborating on this community-maintained fork can however create
+pull requests.
