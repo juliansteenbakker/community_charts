@@ -1,3 +1,7 @@
+# 1.0.1
+* Updated intl dependency to support latest version
+* Removed unused dependencies
+
 # 1.0.0
 Initial fork from google/charts.
 
