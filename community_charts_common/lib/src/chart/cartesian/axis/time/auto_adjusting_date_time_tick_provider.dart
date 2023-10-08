@@ -134,6 +134,9 @@ class AutoAdjustingDateTimeTickProvider implements TickProvider<DateTime> {
 
   /// Find the closest tick provider based on the tick hint.
   TimeRangeTickProvider _getClosestTickProvider(TickHint<DateTime> tickHint) {
+    if (tickHint.tickCount < 2) {
+      return _potentialTickProviders.last;
+    }
     final stepSize = ((tickHint.end.difference(tickHint.start).inMilliseconds) /
             (tickHint.tickCount - 1))
         .round();
