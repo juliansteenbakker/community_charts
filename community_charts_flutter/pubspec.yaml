@@ -4,7 +4,7 @@ description: Material Design charting library for flutter. Forked from google/ch
 repository: https://github.com/juliansteenbakker/community_charts
 
 environment:
-  sdk: '>=2.12.0 <3.0.0'
+  sdk: '>=2.14.0 <4.0.0'
   flutter: '>=2.5.0'
 
 dependencies:
