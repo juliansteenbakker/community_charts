@@ -1,3 +1,7 @@
+# 1.0.2
+* Fixed BaseChart not being destroyed on dispose (@MattyBoy4444)
+* Fix potential divide by zero error for the DateTime tick provider (@Jetz72)
+
 # 1.0.1
 * Removed unused dependencies
 * Updated documentation urls

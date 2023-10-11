@@ -35,7 +35,7 @@ void main() {
 
       final Table layout = builder.build(context, widgets) as Table;
       expect(layout.children.length, 1);
-      expect(layout.children.first.children!.length, 3);
+      expect(layout.children.first.children.length, 3);
     });
 
     test('does not build extra columns if max columns exceed widget count', () {
@@ -45,7 +45,7 @@ void main() {
 
       final Table layout = builder.build(context, widgets) as Table;
       expect(layout.children.length, 1);
-      expect(layout.children.first.children!.length, 3);
+      expect(layout.children.first.children.length, 3);
     });
 
     test('builds horizontally until max column exceeded', () {
@@ -58,16 +58,16 @@ void main() {
       final Table layout = builder.build(context, widgets) as Table;
       expect(layout.children.length, 4);
 
-      expect(layout.children[0].children![0], equals(widgets[0]));
-      expect(layout.children[0].children![1], equals(widgets[1]));
+      expect(layout.children[0].children[0], equals(widgets[0]));
+      expect(layout.children[0].children[1], equals(widgets[1]));
 
-      expect(layout.children[1].children![0], equals(widgets[2]));
-      expect(layout.children[1].children![1], equals(widgets[3]));
+      expect(layout.children[1].children[0], equals(widgets[2]));
+      expect(layout.children[1].children[1], equals(widgets[3]));
 
-      expect(layout.children[2].children![0], equals(widgets[4]));
-      expect(layout.children[2].children![1], equals(widgets[5]));
+      expect(layout.children[2].children[0], equals(widgets[4]));
+      expect(layout.children[2].children[1], equals(widgets[5]));
 
-      expect(layout.children[3].children![0], equals(widgets[6]));
+      expect(layout.children[3].children[0], equals(widgets[6]));
     });
 
     test('builds vertically', () {
@@ -76,9 +76,9 @@ void main() {
 
       final Table layout = builder.build(context, widgets) as Table;
       expect(layout.children.length, 3);
-      expect(layout.children[0].children!.length, 1);
-      expect(layout.children[1].children!.length, 1);
-      expect(layout.children[2].children!.length, 1);
+      expect(layout.children[0].children.length, 1);
+      expect(layout.children[1].children.length, 1);
+      expect(layout.children[2].children.length, 1);
     });
 
     test('does not build extra rows if max rows exceed widget count', () {
@@ -87,9 +87,9 @@ void main() {
 
       final Table layout = builder.build(context, widgets) as Table;
       expect(layout.children.length, 3);
-      expect(layout.children[0].children!.length, 1);
-      expect(layout.children[1].children!.length, 1);
-      expect(layout.children[2].children!.length, 1);
+      expect(layout.children[0].children.length, 1);
+      expect(layout.children[1].children.length, 1);
+      expect(layout.children[2].children.length, 1);
     });
 
     test('builds vertically until max column exceeded', () {
@@ -101,16 +101,16 @@ void main() {
       final Table layout = builder.build(context, widgets) as Table;
       expect(layout.children.length, 2);
 
-      expect(layout.children[0].children![0], equals(widgets[0]));
-      expect(layout.children[1].children![0], equals(widgets[1]));
+      expect(layout.children[0].children[0], equals(widgets[0]));
+      expect(layout.children[1].children[0], equals(widgets[1]));
 
-      expect(layout.children[0].children![1], equals(widgets[2]));
-      expect(layout.children[1].children![1], equals(widgets[3]));
+      expect(layout.children[0].children[1], equals(widgets[2]));
+      expect(layout.children[1].children[1], equals(widgets[3]));
 
-      expect(layout.children[0].children![2], equals(widgets[4]));
-      expect(layout.children[1].children![2], equals(widgets[5]));
+      expect(layout.children[0].children[2], equals(widgets[4]));
+      expect(layout.children[1].children[2], equals(widgets[5]));
 
-      expect(layout.children[0].children![3], equals(widgets[6]));
+      expect(layout.children[0].children[3], equals(widgets[6]));
     });
   });
 }

@@ -1,3 +1,6 @@
+# 1.0.2
+* Upgraded sdk constraint
+
 # 1.0.1
 * Updated intl dependency to support latest version
 * Removed unused dependencies
