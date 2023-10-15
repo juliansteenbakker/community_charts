@@ -27,6 +27,7 @@ import '../base_chart.dart' show LayoutConfig;
 import '../base_chart_state.dart' show BaseChartState;
 import '../cartesian_chart.dart' show CartesianChart;
 import '../selection_model_config.dart' show SelectionModelConfig;
+import '../user_managed_state.dart';
 
 /// A numeric combo chart supports rendering each series of data with different
 /// series renderers.
@@ -48,6 +49,7 @@ class NumericComboChart extends CartesianChart<num> {
     List<SelectionModelConfig<num>>? selectionModels,
     common.RTLSpec? rtlSpec,
     LayoutConfig? layoutConfig,
+    UserManagedState<num>? userManagedState,
     bool defaultInteractions = true,
   }) : super(
           seriesList,
@@ -62,6 +64,7 @@ class NumericComboChart extends CartesianChart<num> {
           selectionModels: selectionModels,
           rtlSpec: rtlSpec,
           layoutConfig: layoutConfig,
+          userManagedState: userManagedState,
           defaultInteractions: defaultInteractions,
         );
 
@@ -93,6 +96,7 @@ class OrdinalComboChart extends CartesianChart<String> {
     List<SelectionModelConfig<String>>? selectionModels,
     common.RTLSpec? rtlSpec,
     LayoutConfig? layoutConfig,
+    UserManagedState<String>? userManagedState,
     bool defaultInteractions = true,
   }) : super(
           seriesList,
@@ -107,6 +111,7 @@ class OrdinalComboChart extends CartesianChart<String> {
           selectionModels: selectionModels,
           rtlSpec: rtlSpec,
           layoutConfig: layoutConfig,
+          userManagedState: userManagedState,
           defaultInteractions: defaultInteractions,
         );
 
