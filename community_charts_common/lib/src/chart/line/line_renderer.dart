@@ -20,6 +20,7 @@ import 'package:collection/collection.dart' show IterableExtension;
 import 'package:meta/meta.dart' show visibleForTesting;
 
 import '../../common/color.dart' show Color;
+import '../../common/graphics_factory.dart';
 import '../../common/math.dart';
 import '../../data/series.dart' show AttributeKey, AccessorFn;
 import '../cartesian/axis/axis.dart'
@@ -925,6 +926,12 @@ class LineRenderer<D> extends BaseCartesianRenderer<D> {
     // available when the default renderer is attached to the chart on chart
     // creation time, since chart onInit is called after the chart is created.
     _chart = chart;
+  }
+  
+  @override
+  void set graphicsFactory(GraphicsFactory? graphicsFactory) {
+    super.graphicsFactory = graphicsFactory;
+    _pointRenderer.graphicsFactory = graphicsFactory;
   }
 
   @override
