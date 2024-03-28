@@ -17,6 +17,7 @@ import '../../common/symbol_renderer.dart';
 import '../common/series_renderer_config.dart'
     show RendererAttributes, SeriesRendererConfig;
 import '../layout/layout_view.dart' show LayoutViewConfig, LayoutViewPaintOrder;
+import '../scatter_plot/point_renderer_decorator.dart';
 import 'line_renderer.dart' show LineRenderer;
 
 /// Configuration for a line renderer.
@@ -73,6 +74,8 @@ class LineRendererConfig<D> extends LayoutViewConfig
   /// Whether lines should have round end caps, or square if false.
   final bool roundEndCaps;
 
+  final List<PointRendererDecorator<D>> pointRendererDecorators;
+
   LineRendererConfig(
       {this.customRendererId,
       this.radiusPx = 3.5,
@@ -85,6 +88,7 @@ class LineRendererConfig<D> extends LayoutViewConfig
       this.layoutPaintOrder = LayoutViewPaintOrder.line,
       this.areaOpacity = 0.1,
       this.roundEndCaps = false,
+      this.pointRendererDecorators = const [],
       SymbolRenderer? symbolRenderer})
       : symbolRenderer = symbolRenderer ?? LineSymbolRenderer();
 

@@ -119,6 +119,8 @@ export 'package:community_charts_common/community_charts_common.dart'
         PointRenderer,
         PointRendererConfig,
         PointRendererDecorator,
+        PointLabelSpec,
+        PointLabelDecorator,
         PointRendererElement,
         PointSymbolRenderer,
         RangeAnnotationAxisType,
