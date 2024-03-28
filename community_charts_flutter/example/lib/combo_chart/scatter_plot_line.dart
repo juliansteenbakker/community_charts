@@ -25,8 +25,31 @@ import 'package:flutter/material.dart';
 class ScatterPlotComboLineChart extends StatelessWidget {
   final List<charts.Series<dynamic, num>> seriesList;
   final bool animate;
+  List<LinearSales> selectedDomains = [];
+  late charts.PointRendererDecorator<num>  pointCustomDecorator;
 
-  ScatterPlotComboLineChart(this.seriesList, {this.animate = false});
+  ScatterPlotComboLineChart(this.seriesList, {this.animate = false}): pointCustomDecorator = charts.PointLabelDecorator(
+                    horizontalPadding: 6,
+                    verticalPadding: 20,
+                  selectedLabelStyleSpec: charts.TextStyleSpec(
+                    color: charts.Color.fromHex(code: '#FF9560'),
+                    fontWeight: '500',
+                    fontSize: 14,
+                  ),
+                  labelCallback: (domain) {
+                    if (domain is LinearSales?) {
+                      // final selected = selectedDomains.contains(domain);
+                      return charts.PointLabelSpec(
+                        label: domain?.sales.toString() ?? '',
+                        selected: false,
+                      );
+                    }
+                    return charts.PointLabelSpec(
+                      label: '',
+                      selected: false,
+                    );
+                  });
+  
 
   /// Creates a [ScatterPlotChart] with sample data and no transition.
   factory ScatterPlotComboLineChart.withSampleData() {
@@ -108,6 +131,8 @@ class ScatterPlotComboLineChart extends StatelessWidget {
   }
   // EXCLUDE_FROM_GALLERY_DOCS_END
 
+  
+
   @override
   Widget build(BuildContext context) {
     return new charts.ScatterPlotChart(seriesList,
@@ -117,7 +142,11 @@ class ScatterPlotComboLineChart extends StatelessWidget {
         //
         // This is the default configuration, but is shown here for
         // illustration.
-        defaultRenderer: new charts.PointRendererConfig(),
+        defaultRenderer: new charts.PointRendererConfig(
+          pointRendererDecorators: [
+            pointCustomDecorator,
+          ]
+        ),
         // Custom renderer configuration for the line series.
         customSeriesRenderers: [
           new charts.LineRendererConfig(
@@ -127,7 +156,7 @@ class ScatterPlotComboLineChart extends StatelessWidget {
               //
               // By default, series drawn by the point renderer are painted on
               // top of those drawn by a line renderer.
-              layoutPaintOrder: charts.LayoutViewPaintOrder.point + 1)
+              layoutPaintOrder: charts.LayoutViewPaintOrder.point + 1),
         ]);
   }
 
