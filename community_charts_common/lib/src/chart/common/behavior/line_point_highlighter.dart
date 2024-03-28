@@ -36,6 +36,7 @@ import '../../layout/layout_view.dart'
         ViewMeasuredSizes;
 import '../base_chart.dart' show BaseChart, LifecycleListener;
 import '../chart_canvas.dart' show ChartCanvas, getAnimatedColor;
+import '../datum_details.dart';
 import '../processed_series.dart' show ImmutableSeries;
 import '../selection_model/selection_model.dart'
     show SelectionModel, SelectionModelType;
@@ -116,6 +117,14 @@ class LinePointHighlighter<D> implements ChartBehavior<D> {
   // data.
   final _currentKeys = <String>[];
 
+  // series ids, only highlight the data from these series
+  //
+  final List<String>? _seriesIds;
+
+  // callback the caller with the selected point
+  //
+  final  void Function(List<DatumDetails<D>>? selectedDetails)? onHighLightDatumUpdated;
+
   LinePointHighlighter(
       {SelectionModelType? selectionModelType,
       double? defaultRadiusPx,
@@ -124,6 +133,8 @@ class LinePointHighlighter<D> implements ChartBehavior<D> {
       LinePointHighlighterFollowLineType? showVerticalFollowLine,
       List<int>? dashPattern,
       bool? drawFollowLinesAcrossChart,
+      List<String>? seriesIds,
+      this.onHighLightDatumUpdated,
       SymbolRenderer? symbolRenderer})
       : selectionModelType = selectionModelType ?? SelectionModelType.info,
         defaultRadiusPx = defaultRadiusPx ?? 4.0,
@@ -134,6 +145,7 @@ class LinePointHighlighter<D> implements ChartBehavior<D> {
             LinePointHighlighterFollowLineType.nearest,
         dashPattern = dashPattern ?? [1, 3],
         drawFollowLinesAcrossChart = drawFollowLinesAcrossChart ?? true,
+        _seriesIds = seriesIds,
         symbolRenderer = symbolRenderer ?? CircleSymbolRenderer() {
     _lifecycleListener =
         LifecycleListener<D>(onAxisConfigured: _updateViewData);
@@ -181,8 +193,9 @@ class LinePointHighlighter<D> implements ChartBehavior<D> {
   void _updateViewData() {
     _currentKeys.clear();
 
-    final selectedDatumDetails =
-        _chart.getSelectedDatumDetails(selectionModelType);
+    final allSelectedDatumDetails = _chart.getSelectedDatumDetails(selectionModelType);
+    final selectedDatumDetails = allSelectedDatumDetails
+        .where((element) => _seriesIds == null || _seriesIds!.contains(element.series?.id));
 
     // Create a new map each time to ensure that we have it sorted in the
     // selection model order. This preserves the "nearestDetail" ordering, so
@@ -272,6 +285,8 @@ class LinePointHighlighter<D> implements ChartBehavior<D> {
 
     _seriesPointMap = newSeriesMap;
     _view.seriesPointMap = _seriesPointMap;
+    
+    onHighLightDatumUpdated?.call(allSelectedDatumDetails);
   }
 
   @override

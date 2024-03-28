@@ -20,10 +20,19 @@ import 'package:community_charts_common/community_charts_common.dart' as common
         LinePointHighlighter,
         LinePointHighlighterFollowLineType,
         SelectionModelType,
+        NullablePoint,
         SymbolRenderer;
 import 'package:meta/meta.dart' show immutable;
 
 import 'chart_behavior.dart' show ChartBehavior, GestureType;
+
+class HighlighterPointInfo<T> {
+  final common.NullablePoint? point;
+  final T? datum;
+  final String seriesId;
+
+  HighlighterPointInfo({this.point, this.datum, required this.seriesId,});
+}
 
 /// Chart behavior that monitors the specified [SelectionModel] and darkens the
 /// color for selected data.
@@ -33,7 +42,7 @@ import 'chart_behavior.dart' show ChartBehavior, GestureType;
 /// It is used in combination with SelectNearest to update the selection model
 /// and expand selection out to the domain value.
 @immutable
-class LinePointHighlighter<D> extends ChartBehavior<D> {
+class LinePointHighlighter<D, T extends Object> extends ChartBehavior<D> {
   final desiredGestures = new Set<GestureType>();
 
   final common.SelectionModelType? selectionModelType;
@@ -71,6 +80,9 @@ class LinePointHighlighter<D> extends ChartBehavior<D> {
   /// Renderer used to draw the highlighted points.
   final common.SymbolRenderer? symbolRenderer;
 
+  final List<String>? seriesIds;
+  final  void Function(List<HighlighterPointInfo<T>>? selectedDetails)? onHighLightDatumUpdated;
+
   LinePointHighlighter(
       {this.selectionModelType,
       this.defaultRadiusPx,
@@ -79,6 +91,8 @@ class LinePointHighlighter<D> extends ChartBehavior<D> {
       this.showVerticalFollowLine,
       this.dashPattern,
       this.drawFollowLinesAcrossChart,
+      this.seriesIds,
+      this.onHighLightDatumUpdated,
       this.symbolRenderer});
 
   @override
@@ -92,6 +106,8 @@ class LinePointHighlighter<D> extends ChartBehavior<D> {
         dashPattern: dashPattern,
         drawFollowLinesAcrossChart: drawFollowLinesAcrossChart,
         symbolRenderer: symbolRenderer,
+        seriesIds: seriesIds,
+        onHighLightDatumUpdated: (selectedDetails) => onHighLightDatumUpdated?.call(selectedDetails?.map((e) => HighlighterPointInfo<T>(seriesId: e.series?.id ?? '', point: e.chartPosition, datum: e.datum,)).toList()),
       );
 
   @override
@@ -108,6 +124,7 @@ class LinePointHighlighter<D> extends ChartBehavior<D> {
         showHorizontalFollowLine == o.showHorizontalFollowLine &&
         showVerticalFollowLine == o.showVerticalFollowLine &&
         selectionModelType == o.selectionModelType &&
+        seriesIds == o.seriesIds &&
         new ListEquality().equals(dashPattern, o.dashPattern) &&
         drawFollowLinesAcrossChart == o.drawFollowLinesAcrossChart;
   }
@@ -122,6 +139,7 @@ class LinePointHighlighter<D> extends ChartBehavior<D> {
       showVerticalFollowLine,
       dashPattern,
       drawFollowLinesAcrossChart,
+      seriesIds,
     );
   }
 }
