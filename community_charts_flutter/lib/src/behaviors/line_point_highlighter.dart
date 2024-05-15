@@ -31,7 +31,11 @@ class HighlighterPointInfo<T> {
   final T? datum;
   final String seriesId;
 
-  HighlighterPointInfo({this.point, this.datum, required this.seriesId,});
+  HighlighterPointInfo({
+    this.point,
+    this.datum,
+    required this.seriesId,
+  });
 }
 
 /// Chart behavior that monitors the specified [SelectionModel] and darkens the
@@ -81,7 +85,8 @@ class LinePointHighlighter<D, T extends Object> extends ChartBehavior<D> {
   final common.SymbolRenderer? symbolRenderer;
 
   final List<String>? seriesIds;
-  final  void Function(List<HighlighterPointInfo<T>>? selectedDetails)? onHighLightDatumUpdated;
+  final void Function(List<HighlighterPointInfo<T>>? selectedDetails)?
+      onHighLightDatumUpdated;
 
   LinePointHighlighter(
       {this.selectionModelType,
@@ -107,7 +112,14 @@ class LinePointHighlighter<D, T extends Object> extends ChartBehavior<D> {
         drawFollowLinesAcrossChart: drawFollowLinesAcrossChart,
         symbolRenderer: symbolRenderer,
         seriesIds: seriesIds,
-        onHighLightDatumUpdated: (selectedDetails) => onHighLightDatumUpdated?.call(selectedDetails?.map((e) => HighlighterPointInfo<T>(seriesId: e.series?.id ?? '', point: e.chartPosition, datum: e.datum,)).toList()),
+        onHighLightDatumUpdated: (selectedDetails) =>
+            onHighLightDatumUpdated?.call(selectedDetails
+                ?.map((e) => HighlighterPointInfo<T>(
+                      seriesId: e.series?.id ?? '',
+                      point: e.chartPosition,
+                      datum: e.datum,
+                    ))
+                .toList()),
       );
 
   @override

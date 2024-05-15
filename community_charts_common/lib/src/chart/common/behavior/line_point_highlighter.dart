@@ -123,7 +123,8 @@ class LinePointHighlighter<D> implements ChartBehavior<D> {
 
   // callback the caller with the selected point
   //
-  final  void Function(List<DatumDetails<D>>? selectedDetails)? onHighLightDatumUpdated;
+  final void Function(List<DatumDetails<D>>? selectedDetails)?
+      onHighLightDatumUpdated;
 
   LinePointHighlighter(
       {SelectionModelType? selectionModelType,
@@ -193,9 +194,10 @@ class LinePointHighlighter<D> implements ChartBehavior<D> {
   void _updateViewData() {
     _currentKeys.clear();
 
-    final allSelectedDatumDetails = _chart.getSelectedDatumDetails(selectionModelType);
-    final selectedDatumDetails = allSelectedDatumDetails
-        .where((element) => _seriesIds == null || _seriesIds!.contains(element.series?.id));
+    final allSelectedDatumDetails =
+        _chart.getSelectedDatumDetails(selectionModelType);
+    final selectedDatumDetails = allSelectedDatumDetails.where((element) =>
+        _seriesIds == null || _seriesIds!.contains(element.series?.id));
 
     // Create a new map each time to ensure that we have it sorted in the
     // selection model order. This preserves the "nearestDetail" ordering, so
@@ -285,7 +287,7 @@ class LinePointHighlighter<D> implements ChartBehavior<D> {
 
     _seriesPointMap = newSeriesMap;
     _view.seriesPointMap = _seriesPointMap;
-    
+
     onHighLightDatumUpdated?.call(allSelectedDatumDetails);
   }
 

@@ -119,13 +119,9 @@ void main() {
     when(_chart.domainAxis).thenReturn(_domainAxis);
     when(_chart.getMeasureAxis()).thenReturn(_measureAxis);
 
-    if (isWithinRenderer != null) {
-      when(_chart.pointWithinRenderer(forPoint)).thenReturn(isWithinRenderer);
-    }
-    if (respondWithDetails != null) {
-      when(_chart.getNearestDatumDetailPerSeries(forPoint, true))
-          .thenReturn(respondWithDetails);
-    }
+    when(_chart.pointWithinRenderer(forPoint)).thenReturn(isWithinRenderer);
+    when(_chart.getNearestDatumDetailPerSeries(forPoint, true))
+        .thenReturn(respondWithDetails);
   }
 
   setUp(() {

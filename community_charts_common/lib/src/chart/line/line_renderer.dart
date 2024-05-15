@@ -77,7 +77,11 @@ class LineRenderer<D> extends BaseCartesianRenderer<D> {
 
   LineRenderer._internal({required String rendererId, required this.config})
       : _pointRenderer = PointRenderer<D>(
-            config: PointRendererConfig<D>(radiusPx: config.radiusPx, symbolRenderer: config.symbolRenderer, pointRendererDecorators: config.pointRendererDecorators,)),
+            config: PointRendererConfig<D>(
+          radiusPx: config.radiusPx,
+          symbolRenderer: config.symbolRenderer,
+          pointRendererDecorators: config.pointRendererDecorators,
+        )),
         super(
             rendererId: rendererId,
             layoutPaintOrder: config.layoutPaintOrder,
@@ -927,7 +931,7 @@ class LineRenderer<D> extends BaseCartesianRenderer<D> {
     // creation time, since chart onInit is called after the chart is created.
     _chart = chart;
   }
-  
+
   @override
   void set graphicsFactory(GraphicsFactory? graphicsFactory) {
     super.graphicsFactory = graphicsFactory;

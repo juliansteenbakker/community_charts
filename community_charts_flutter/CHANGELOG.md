@@ -1,4 +1,4 @@
-# 1.0.3
+# 1.0.4
 * Added UserManagedState variable to be passed down into the super constructor on NumericComboChart and OrdinalComboChart
 * Add FontWeight support
 

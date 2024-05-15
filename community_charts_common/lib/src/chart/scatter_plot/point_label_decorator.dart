@@ -23,11 +23,13 @@ import '../common/chart_canvas.dart';
 import 'point_renderer.dart';
 import 'point_renderer_decorator.dart';
 
-
 class PointLabelSpec {
   final String label;
   final bool selected;
-  PointLabelSpec({required this.label, this.selected = false,});
+  PointLabelSpec({
+    required this.label,
+    this.selected = false,
+  });
 }
 
 typedef LabelCallback = PointLabelSpec Function(Object? datum);
@@ -42,14 +44,12 @@ class PointLabelDecorator<D> extends PointRendererDecorator<D> {
   TextStyle? _labelStyle;
   TextStyle? _selectedLabelStyle;
 
-
-  PointLabelDecorator({
-    this.labelStyleSpec,
-    this.selectedLabelStyleSpec,
-    required this.labelCallback,
-    this.horizontalPadding = 0,
-    this.verticalPadding = 0
-  });
+  PointLabelDecorator(
+      {this.labelStyleSpec,
+      this.selectedLabelStyleSpec,
+      required this.labelCallback,
+      this.horizontalPadding = 0,
+      this.verticalPadding = 0});
 
   @override
   bool get renderAbove => true;
@@ -58,13 +58,12 @@ class PointLabelDecorator<D> extends PointRendererDecorator<D> {
   void decorate(PointRendererElement<D> pointElement, ChartCanvas canvas,
       GraphicsFactory graphicsFactory,
       {required Rectangle drawBounds,
-        required double animationPercent,
-        bool rtl = false}) {
+      required double animationPercent,
+      bool rtl = false}) {
     // Only decorate the bars when animation is at 100%.
     if (animationPercent != 1.0) {
       return;
     }
-
 
     if (_labelStyle == null) {
       _initLabelStyle(graphicsFactory);
@@ -80,21 +79,21 @@ class PointLabelDecorator<D> extends PointRendererDecorator<D> {
     final labelY = point.y!.toInt() - verticalPadding;
 
     canvas.drawText(labelElement, labelX, labelY);
-
   }
 
   void _initLabelStyle(GraphicsFactory graphicsFactory) {
     _labelStyle = _textStyleFromSpec(graphicsFactory, labelStyleSpec);
-    _selectedLabelStyle =
-    selectedLabelStyleSpec != null ? _textStyleFromSpec(graphicsFactory, selectedLabelStyleSpec) : _labelStyle;
+    _selectedLabelStyle = selectedLabelStyleSpec != null
+        ? _textStyleFromSpec(graphicsFactory, selectedLabelStyleSpec)
+        : _labelStyle;
   }
 
-  TextStyle? _textStyleFromSpec(GraphicsFactory graphicsFactory, TextStyleSpec? spec) {
+  TextStyle? _textStyleFromSpec(
+      GraphicsFactory graphicsFactory, TextStyleSpec? spec) {
     return graphicsFactory.createTextPaint()
       ..color = spec?.color ?? const Color(r: 0, g: 0, b: 0)
       ..fontFamily = spec?.fontFamily
       ..fontSize = spec?.fontSize ?? 12
       ..fontWeight = spec?.fontWeight ?? '400';
   }
-
 }

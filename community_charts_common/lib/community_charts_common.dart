@@ -253,7 +253,8 @@ export 'src/chart/scatter_plot/point_renderer_config.dart'
     show PointRendererConfig;
 export 'src/chart/scatter_plot/point_renderer_decorator.dart'
     show PointRendererDecorator;
-export 'src/chart/scatter_plot/point_label_decorator.dart';
+export 'src/chart/scatter_plot/point_label_decorator.dart'
+    show PointLabelDecorator, PointLabelSpec;
 export 'src/chart/scatter_plot/scatter_plot_chart.dart' show ScatterPlotChart;
 export 'src/chart/scatter_plot/symbol_annotation_renderer.dart'
     show SymbolAnnotationRenderer;

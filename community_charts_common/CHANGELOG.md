@@ -1,4 +1,4 @@
-# 1.0.3
+# 1.0.4
 * Add a PointLabelDecorator to render a label for a point
 * Enhance LinePointHighlighter to support callbacking the highlight points's info like position, datum and its corresponding seriers id
 * Update intl package
