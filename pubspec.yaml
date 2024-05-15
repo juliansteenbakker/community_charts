@@ -1,0 +1,8 @@
+name: community_charts
+
+environment:
+  sdk: '>=2.15.0 <4.0.0'
+
+dev_dependencies:
+  flutter_lints: ^3.0.2
+  melos: ^6.0.0

@@ -1,0 +1,14 @@
+name: community_charts
+repository: https://github.com/juliansteenbakker/community_charts
+
+packages:
+  - community_charts_common
+  - community_charts_flutter
+
+command:
+  version:
+    linkToCommits: true
+    workspaceChangelog: true
+
+  bootstrap:
+    usePubspecOverrides: true

@@ -1,3 +1,7 @@
+# 1.0.3
+* Added UserManagedState variable to be passed down into the super constructor on NumericComboChart and OrdinalComboChart
+* Add FontWeight support
+
 # 1.0.2
 * Fixed BaseChart not being destroyed on dispose (@MattyBoy4444)
 * Fix potential divide by zero error for the DateTime tick provider (@Jetz72)
