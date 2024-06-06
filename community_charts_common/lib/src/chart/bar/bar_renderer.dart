@@ -86,11 +86,11 @@ class BarRenderer<D>
     final domainAxis = series.getAttr(domainAxisKey) as ImmutableAxis<D>;
     final measureAxis = series.getAttr(measureAxisKey) as ImmutableAxis<num>;
 
-    final barGroupIndex = series.getAttr(barGroupIndexKey)!;
+    final barGroupIndex = series.getAttr(barGroupIndexKey) ?? 0;
     final previousBarGroupWeight = series.getAttr(previousBarGroupWeightKey);
     final barGroupWeight = series.getAttr(barGroupWeightKey);
     final allBarGroupWeights = series.getAttr(allBarGroupWeightsKey);
-    final numBarGroups = series.getAttr(barGroupCountKey)!;
+    final numBarGroups = series.getAttr(barGroupCountKey) ?? 0;
 
     final bounds = _getBarBounds(
         details.domain,
@@ -409,6 +409,7 @@ class BarRenderer<D>
     // TODO: Investigate why this is negative for a DateTime domain
     // in RTL mode.
     domainWidth = domainWidth.abs();
+    if (numBarGroups == 0) numBarGroups = 1;
 
     // If no weights were passed in, default to equal weight per bar.
     if (barGroupWeight == null) {
