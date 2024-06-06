@@ -37,6 +37,8 @@ import 'legend_content_builder.dart'
     show LegendContentBuilder, TabularLegendContentBuilder;
 import 'legend_layout.dart' show TabularLegendLayout;
 
+typedef HiddenSeriesOnChange = void Function(List<String> hiddenSeries);
+
 /// Series legend behavior for charts.
 @immutable
 class SeriesLegend<D> extends ChartBehavior<D> {
@@ -90,6 +92,8 @@ class SeriesLegend<D> extends ChartBehavior<D> {
 
   final List<String>? defaultHiddenSeries;
 
+  final HiddenSeriesOnChange? hiddenSeriesOnChange;
+
   /// Create a new tabular layout legend.
   ///
   /// By default, the legend is place above the chart and horizontally aligned
@@ -139,6 +143,7 @@ class SeriesLegend<D> extends ChartBehavior<D> {
     int? desiredMaxColumns,
     EdgeInsets? cellPadding,
     List<String>? defaultHiddenSeries,
+    HiddenSeriesOnChange? hiddenSeriesOnChange,
     bool? showMeasures,
     common.LegendDefaultMeasure? legendDefaultMeasure,
     common.MeasureFormatter? measureFormatter,
@@ -170,6 +175,7 @@ class SeriesLegend<D> extends ChartBehavior<D> {
         outsideJustification: outsideJustification,
         insideJustification: insideJustification,
         defaultHiddenSeries: defaultHiddenSeries,
+        hiddenSeriesOnChange: hiddenSeriesOnChange,
         showMeasures: showMeasures ?? false,
         legendDefaultMeasure:
             legendDefaultMeasure ?? common.LegendDefaultMeasure.none,
@@ -214,6 +220,7 @@ class SeriesLegend<D> extends ChartBehavior<D> {
     common.OutsideJustification? outsideJustification,
     common.InsideJustification? insideJustification,
     List<String>? defaultHiddenSeries,
+    HiddenSeriesOnChange? hiddenSeriesOnChange,
     bool? showMeasures,
     common.LegendDefaultMeasure? legendDefaultMeasure,
     common.MeasureFormatter? measureFormatter,
@@ -232,6 +239,7 @@ class SeriesLegend<D> extends ChartBehavior<D> {
       outsideJustification: outsideJustification,
       insideJustification: insideJustification,
       defaultHiddenSeries: defaultHiddenSeries,
+      hiddenSeriesOnChange: hiddenSeriesOnChange,
       showMeasures: showMeasures ?? false,
       legendDefaultMeasure:
           legendDefaultMeasure ?? common.LegendDefaultMeasure.none,
@@ -248,6 +256,7 @@ class SeriesLegend<D> extends ChartBehavior<D> {
     required this.outsideJustification,
     required this.insideJustification,
     this.defaultHiddenSeries,
+    this.hiddenSeriesOnChange,
     required this.showMeasures,
     this.legendDefaultMeasure,
     this.measureFormatter,
@@ -278,6 +287,7 @@ class SeriesLegend<D> extends ChartBehavior<D> {
         outsideJustification == o.outsideJustification &&
         insideJustification == o.insideJustification &&
         new ListEquality().equals(defaultHiddenSeries, o.defaultHiddenSeries) &&
+        hiddenSeriesOnChange == o.hiddenSeriesOnChange &&
         showMeasures == o.showMeasures &&
         legendDefaultMeasure == o.legendDefaultMeasure &&
         measureFormatter == o.measureFormatter &&
@@ -294,6 +304,7 @@ class SeriesLegend<D> extends ChartBehavior<D> {
         outsideJustification,
         insideJustification,
         defaultHiddenSeries,
+        hiddenSeriesOnChange,
         showMeasures,
         legendDefaultMeasure,
         measureFormatter,
@@ -374,6 +385,11 @@ class _FlutterSeriesLegend<D> extends common.SeriesLegend<D>
       showSeries(seriesId);
     } else {
       hideSeries(seriesId);
+    }
+
+    if (config.hiddenSeriesOnChange != null) {
+      List<String> tmpHiddenSeriesList = showHiddenSeriesList();
+      config.hiddenSeriesOnChange!(tmpHiddenSeriesList);
     }
 
     // Redraw the chart to actually hide hidden series.
