@@ -256,19 +256,21 @@ abstract class BaseChart<D> {
   /// selection should be done across the combined draw area of all components
   /// with series draw areas, or just the chart's primary draw area bounds.
   List<DatumDetails<D>> getNearestDatumDetailPerSeries(
-      Point<double> drawAreaPoint, bool selectAcrossAllDrawAreaComponents) {
+      Point<double> drawAreaPoint, bool selectAcrossAllDrawAreaComponents, {bool? selectNearestByDomainOverride}) {
     // Optionally grab the combined draw area bounds of all components. If this
     // is disabled, then we expect each series renderer to filter out the event
     // if [chartPoint] is located outside of its own component bounds.
     final boundsOverride =
         selectAcrossAllDrawAreaComponents ? drawableLayoutAreaBounds : null;
 
+    bool _selectNearestByDomain = selectNearestByDomain;
+    if (selectNearestByDomainOverride != null) _selectNearestByDomain = selectNearestByDomainOverride;
     final details = <DatumDetails<D>>[];
     _usingRenderers.forEach((String rendererId) {
       details
           .addAll(getSeriesRenderer(rendererId).getNearestDatumDetailPerSeries(
         drawAreaPoint,
-        selectNearestByDomain,
+        _selectNearestByDomain,
         boundsOverride,
         selectOverlappingPoints: selectOverlappingPoints,
         selectExactEventLocation: selectExactEventLocation,
