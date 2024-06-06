@@ -190,4 +190,8 @@ class SeriesLegend<D> extends Legend<D> {
     return _alwaysVisibleSeries != null &&
         _alwaysVisibleSeries!.contains(seriesId);
   }
+
+  List<String> showHiddenSeriesList() {
+    return _hiddenSeriesList.toList();
+  }
 }
