@@ -58,6 +58,7 @@ class SelectNearest<D> extends ChartBehavior<D> {
   final bool selectAcrossAllDrawAreaComponents;
   final bool selectClosestSeries;
   final int? maximumDomainDistancePx;
+  final bool? useRelativeDistance;
 
   SelectNearest._internal(
       {required this.selectionModelType,
@@ -66,7 +67,8 @@ class SelectNearest<D> extends ChartBehavior<D> {
       this.selectClosestSeries = true,
       required this.eventTrigger,
       required this.desiredGestures,
-      this.maximumDomainDistancePx});
+      this.maximumDomainDistancePx,
+      this.useRelativeDistance});
 
   factory SelectNearest(
       {common.SelectionModelType selectionModelType =
@@ -75,7 +77,8 @@ class SelectNearest<D> extends ChartBehavior<D> {
       bool selectAcrossAllDrawAreaComponents = false,
       bool selectClosestSeries = true,
       common.SelectionTrigger eventTrigger = common.SelectionTrigger.tap,
-      int? maximumDomainDistancePx}) {
+      int? maximumDomainDistancePx,
+      bool? useRelativeDistance}) {
     return new SelectNearest._internal(
         selectionModelType: selectionModelType,
         selectionMode: selectionMode,
@@ -83,7 +86,8 @@ class SelectNearest<D> extends ChartBehavior<D> {
         selectClosestSeries: selectClosestSeries,
         eventTrigger: eventTrigger,
         desiredGestures: SelectNearest._getDesiredGestures(eventTrigger),
-        maximumDomainDistancePx: maximumDomainDistancePx);
+        maximumDomainDistancePx: maximumDomainDistancePx,
+        useRelativeDistance: useRelativeDistance);
   }
 
   static Set<GestureType> _getDesiredGestures(
@@ -120,7 +124,8 @@ class SelectNearest<D> extends ChartBehavior<D> {
         eventTrigger: eventTrigger,
         selectionMode: selectionMode,
         selectClosestSeries: selectClosestSeries,
-        maximumDomainDistancePx: maximumDomainDistancePx);
+        maximumDomainDistancePx: maximumDomainDistancePx,
+        useRelativeDistance: useRelativeDistance);
   }
 
   @override
@@ -137,7 +142,8 @@ class SelectNearest<D> extends ChartBehavior<D> {
           (eventTrigger == other.eventTrigger) &&
           (selectionMode == other.selectionMode) &&
           (selectClosestSeries == other.selectClosestSeries) &&
-          (maximumDomainDistancePx == other.maximumDomainDistancePx);
+          (maximumDomainDistancePx == other.maximumDomainDistancePx) &&
+          (useRelativeDistance == other.useRelativeDistance);
     } else {
       return false;
     }
@@ -149,6 +155,9 @@ class SelectNearest<D> extends ChartBehavior<D> {
     hashcode = hashcode * 37 + selectionMode.hashCode;
     hashcode = hashcode * 37 + selectClosestSeries.hashCode;
     hashcode = hashcode * 37 + maximumDomainDistancePx.hashCode;
+    if (useRelativeDistance != null) {
+      hashcode = hashcode * 37 + useRelativeDistance.hashCode;
+    }
     return hashcode;
   }
 }
