@@ -15,6 +15,7 @@
 
 import 'dart:math' show pi;
 
+import '../../common/color.dart';
 import '../../common/symbol_renderer.dart';
 import '../layout/layout_view.dart' show LayoutViewPaintOrder;
 import 'arc_renderer.dart' show ArcRenderer;
@@ -33,6 +34,7 @@ class ArcRendererConfig<D> extends BaseArcRendererConfig<D> {
       int minHoleWidthForCenterContent = 30,
       double startAngle = -pi / 2,
       double strokeWidthPx = 2.0,
+      Color? strokeColor,
       SymbolRenderer? symbolRenderer})
       : super(
             customRendererId: customRendererId,
@@ -43,6 +45,7 @@ class ArcRendererConfig<D> extends BaseArcRendererConfig<D> {
             minHoleWidthForCenterContent: minHoleWidthForCenterContent,
             startAngle: startAngle,
             strokeWidthPx: strokeWidthPx,
+            strokeColor: strokeColor,
             arcRendererDecorators: arcRendererDecorators);
 
   @override
