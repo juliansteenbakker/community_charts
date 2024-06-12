@@ -137,4 +137,4 @@ class ChartGestureDetector {
 }
 
 // Exposed for testing.
-typedef ChartContainerRenderObject _ContainerResolver();
+typedef _ContainerResolver = ChartContainerRenderObject Function();
