@@ -136,7 +136,7 @@ class LinePainter {
     // Array of points that is used to draw a connecting path when only a
     // partial dash pattern segment can be drawn in the remaining length of a
     // line segment (between two defined points in the shape).
-    var remainderPoints;
+    List<Offset>? remainderPoints;
 
     // Draw the path through all the rest of the points in the series.
     for (var pointIndex = 1; pointIndex < points.length; pointIndex++) {

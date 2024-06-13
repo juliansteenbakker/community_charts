@@ -16,18 +16,18 @@
 import 'package:community_charts_common/community_charts_common.dart' as common
     show GraphicsFactory, LineStyle, TextElement, TextStyle;
 import 'package:flutter/widgets.dart'
-    show BuildContext, DefaultTextStyle, MediaQuery;
+    show BuildContext, DefaultTextStyle, MediaQuery, TextScaler;
 import 'line_style.dart' show LineStyle;
 import 'text_element.dart' show TextElement;
 import 'text_style.dart' show TextStyle;
 
 class GraphicsFactory implements common.GraphicsFactory {
-  final double textScaleFactor;
+  final TextScaler textScaler;
   final DefaultTextStyle defaultTextStyle;
 
   GraphicsFactory(BuildContext context,
       {GraphicsFactoryHelper helper = const GraphicsFactoryHelper()})
-      : textScaleFactor = helper.getTextScaleFactorOf(context),
+      : textScaler = helper.getTextScalerOf(context),
         defaultTextStyle = DefaultTextStyle.of(context);
 
   /// Returns a [TextStyle] object.
@@ -38,7 +38,7 @@ class GraphicsFactory implements common.GraphicsFactory {
   /// Returns a text element from [text].
   @override
   common.TextElement createTextElement(String text) {
-    return TextElement(text, textScaleFactor: textScaleFactor)
+    return TextElement(text, textScaler: textScaler)
       ..textStyle = createTextPaint();
   }
 
@@ -50,6 +50,6 @@ class GraphicsFactory implements common.GraphicsFactory {
 class GraphicsFactoryHelper {
   const GraphicsFactoryHelper();
 
-  double getTextScaleFactorOf(BuildContext context) =>
-      MediaQuery.textScaleFactorOf(context);
+  TextScaler getTextScalerOf(BuildContext context) =>
+      MediaQuery.textScalerOf(context);
 }
