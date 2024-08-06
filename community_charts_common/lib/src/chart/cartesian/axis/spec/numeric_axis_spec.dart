@@ -119,6 +119,7 @@ class BasicNumericTickProviderSpec implements NumericTickProviderSpec {
   final int? desiredTickCount;
   final int? desiredMinTickCount;
   final int? desiredMaxTickCount;
+  final double? minStepSize;
 
   /// Creates a [TickProviderSpec] that dynamically chooses the number of
   /// ticks based on the extents of the data.
@@ -135,12 +136,14 @@ class BasicNumericTickProviderSpec implements NumericTickProviderSpec {
   /// [desiredMaxTickCount] automatically choose the best tick
   ///     count to produce the 'nicest' ticks but make sure we don't have more
   ///     than this many.
+  /// [minStepSize] the minimum step size between ticks.
   const BasicNumericTickProviderSpec(
       {this.zeroBound,
       this.dataIsInWholeNumbers,
       this.desiredTickCount,
       this.desiredMinTickCount,
-      this.desiredMaxTickCount});
+      this.desiredMaxTickCount,
+      this.minStepSize});
 
   @override
   NumericTickProvider createTickProvider(ChartContext context) {
@@ -151,7 +154,9 @@ class BasicNumericTickProviderSpec implements NumericTickProviderSpec {
     if (dataIsInWholeNumbers != null) {
       provider.dataIsInWholeNumbers = dataIsInWholeNumbers!;
     }
-
+    if (minStepSize != null) {
+      provider.minStepSize = minStepSize!;
+    }
     if (desiredMinTickCount != null ||
         desiredMaxTickCount != null ||
         desiredTickCount != null) {

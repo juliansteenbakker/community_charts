@@ -195,6 +195,19 @@ class NumericTickProvider extends BaseTickProvider<num> {
     }
   }
 
+  double? _minStepSize;
+
+  /// Sets the minimum step size between ticks.
+  ///
+  /// If the calculated step size is less than the minimum step size, the minimum step size
+  /// will be used.
+  ///
+  /// [minStepSize] the minimum step size between ticks.
+  set minStepSize(double minStepSize) {
+    assert(minStepSize > 0.0);
+    _minStepSize = minStepSize;
+  }
+
   List<Tick<num>> _getTicksFromHint({
     required ChartContext? context,
     required GraphicsFactory graphicsFactory,
@@ -434,7 +447,11 @@ class NumericTickProvider extends BaseTickProvider<num> {
           final stepStart = negativeRegionCount > 0
               ? (-1 * tmpStepSize * negativeRegionCount)
               : 0.0;
-          return _TickStepInfo(tmpStepSize, stepStart);
+          final stepSize = (_minStepSize != null && _minStepSize! > tmpStepSize)
+              ? _minStepSize!
+              : tmpStepSize;
+
+          return _TickStepInfo(stepSize, stepStart);
         }
       }
     } else {
@@ -454,7 +471,11 @@ class NumericTickProvider extends BaseTickProvider<num> {
         // But wait until the last step to prevent the cost of the formatter.
         final tmpStepStart = _getStepLessThan(low.toDouble(), tmpStepSize);
         if (tmpStepStart + (tmpStepSize * regionCount) >= high) {
-          return _TickStepInfo(tmpStepSize, tmpStepStart);
+          final stepSize = (_minStepSize != null && _minStepSize! > tmpStepSize)
+              ? _minStepSize!
+              : tmpStepSize;
+
+          return _TickStepInfo(stepSize, tmpStepStart);
         }
       }
     }
