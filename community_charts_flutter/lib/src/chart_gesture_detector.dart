@@ -15,6 +15,7 @@
 
 import 'dart:async' show Timer;
 import 'dart:math' show Point;
+import 'package:flutter/gestures.dart' show PointerHoverEvent;
 import 'package:flutter/material.dart'
     show
         BuildContext,
@@ -24,7 +25,8 @@ import 'package:flutter/material.dart'
         ScaleStartDetails,
         ScaleUpdateDetails,
         TapDownDetails,
-        TapUpDetails;
+        TapUpDetails,
+        MouseRegion;
 
 import 'behaviors/chart_behavior.dart' show GestureType;
 import 'chart_container.dart' show ChartContainer, ChartContainerRenderObject;
@@ -62,13 +64,25 @@ class ChartGestureDetector {
     // gestures.
     _listeningForLongPress = desiredGestures.contains(GestureType.onLongPress);
 
-    return new GestureDetector(
-      child: chartContainer,
+    final wantHover = desiredGestures.contains(GestureType.onHover);
+
+    return GestureDetector(
       onTapDown: wantTapDown ? onTapDown : null,
       onTapUp: wantTap ? onTapUp : null,
       onScaleStart: wantDrag ? onScaleStart : null,
       onScaleUpdate: wantDrag ? onScaleUpdate : null,
       onScaleEnd: wantDrag ? onScaleEnd : null,
+      child: wantHover
+          ? MouseRegion(onHover: onHover, child: chartContainer)
+          : chartContainer,
+    );
+  }
+
+  void onHover(PointerHoverEvent event) {
+    final container = _containerResolver();
+    final localPosition = container.globalToLocal(event.position);
+    container.gestureProxy.onHover(
+      Point(localPosition.dx, localPosition.dy),
     );
   }
 
