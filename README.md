@@ -14,13 +14,13 @@ types and examples of how to custom components of the chart.
 
 ## community_charts_common
 
-[![community_charts_common pub package](https://img.shields.io/pub/v/community_charts_common.svg)](https://pub.dartlang.org/packages/community_charts_common)
+[![community_charts_common pub package](https://img.shields.io/pub/v/community_charts_common.svg)](https://pub.dev/packages/community_charts_common)
 
 A common library for charting packages.
 
 ## community_charts_flutter
 
-[![community_charts_flutter pub package](https://img.shields.io/pub/v/community_charts_flutter.svg)](https://pub.dartlang.org/packages/community_charts_flutter)
+[![community_charts_flutter pub package](https://img.shields.io/pub/v/community_charts_flutter.svg)](https://pub.dev/packages/community_charts_flutter)
 
 A charting package for [Flutter](https://flutter.io), supporting both Android
 and iOS.
